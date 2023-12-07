@@ -26,6 +26,7 @@
 .offcanvas{
     width: 80px;
 }
+
 @media all and (min-width: 768px) and (max-width: 992px){
     .linksLG{
         font-size: 11px;
