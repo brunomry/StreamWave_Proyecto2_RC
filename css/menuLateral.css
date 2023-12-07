@@ -9,3 +9,13 @@
     width: 250px;
     height: 100vh; 
 }
+.btnMenuLateralLG{
+    border: 2px solid #06080F ;
+}
+
+.btnMenuLateralLG:hover{
+    border: 2px solid #7df2ff;
+}
+.iconosMenuLateral{
+    font-size: 30px;
+}
