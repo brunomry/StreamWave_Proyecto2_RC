@@ -29,3 +29,14 @@
 .iconosMenuLateral{
     font-size: 30px;
 }
+.separadorHamburguesa{
+    color: #7df2ff;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px){
+    .menuLateral{
+        width: 200px;
+        font-size: 14px;
+    }
+
+}
