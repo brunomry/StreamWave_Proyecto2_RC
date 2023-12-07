@@ -7,8 +7,12 @@
 .navbarIndexHorizontal{
     background-color: #06080F;
 }
-
-
+.offCanvasNavbarIndex{
+    background-color: #06080F;
+}
+.iconoNavbarIndexMD{
+    font-size: 20px;
+}
 .menuLateral{
     background-color: #06080F;
     width: 250px;
