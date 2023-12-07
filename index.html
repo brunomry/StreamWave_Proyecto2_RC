@@ -13,7 +13,98 @@
     <link rel="stylesheet" href="./css/menuLateral.css" />
   </head>
   <body>
-    <header></header>
+    <header class="headerLateral">
+      <!-- navbar de resolucion MD o menor -->
+      <nav class="navbar navbar-dark fixed-top d-md-none navbarHorizontal">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Logo/Marca</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header offCanvasNavbar">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo/Marca</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offCanvasNavbar">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active text-center" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="#">Acerca de nosotros</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="#">Iniciar sesion</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="#">Registrarse</a>
+                </li>
+                <li class="nav-item dropdown d-none">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Cuenta
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Iniciar sesion</a></li>
+                    <li><a class="dropdown-item" href="#">Registrarse</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar de resolucion LG o mayor -->
+      <nav class=" navbar-dark navbar navbar-expand-md d-none d-md-block px-3 py-3 menuLateral ">
+        <div class="container-fluid d-flex flex-column align-items-start">
+          <div class="logo mb-5">
+            <a class="navbar-brand" href="#">Logo/Marca</a>
+          </div>
+          <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-column">
+            <li class="nav-item">
+              <a class="nav-link active linksLG" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link linksLG" href="#">Acerca de nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link linksLG" href="#">Contacto</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-column">
+            <li class="nav-item">
+              <button class="btn"> <a class="nav-link linksLG" href="#">Iniciar sesion</a> </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn"> <a class="nav-link linksLG" href="#">Registrarse</a> </button>
+            </li>
+          </ul>
+          <!-- abajo está el icono de usuario que aparece una vez iniciada la sesion -->
+          <ul class="navbar-nav mb-2 mb-lg-0 botonDropdown d-none">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-user fa-xl"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Administrar cuenta</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <main></main>
     <footer></footer>
     <script
