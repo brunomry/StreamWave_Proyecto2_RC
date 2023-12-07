@@ -4,10 +4,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.edicionNavbar{
+.navbarHorizontal{
     background-color: #06080F;
     color: white;
-    height: 80px;
 }
 .linksLG{
     border-bottom: 3px solid #06080F;
@@ -20,4 +19,7 @@
 }
 .botonDropdown{
     margin-right: 100px;
+}
+.offCanvasNavbar{
+    background-color: #06080F;
 }
