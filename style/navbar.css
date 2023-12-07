@@ -7,7 +7,13 @@
 .edicionNavbar{
     background-color: #06080F;
     color: white;
-    border-bottom: 8px solid #7df2ff;
+    height: 80px;
+}
+.linksLG{
+    border-bottom: 3px solid #06080F;
+}
+.linksLG:hover{
+    border-bottom: 3px solid #7df2ff;
 }
 .logo{
     margin-left: 100px;
