@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.edicionNavbar{
+    background-color: #06080F;
+    color: white;
+    border-bottom: 8px solid #7df2ff;
+}
+.logo{
+    margin-left: 100px;
+}
+.botonDropdown{
+    margin-right: 100px;
+}
