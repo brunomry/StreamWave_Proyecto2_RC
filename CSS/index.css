@@ -1,0 +1,53 @@
+body{
+  background-color: #06080F;
+  color: #fff;
+  overflow-x: hidden;
+  font-family: 'Poppins',sans-serif;
+}
+
+.formPrincipal{
+  width: 100%;
+}
+
+.btnIniciarSesion{
+  background: #3ab9f0;
+  font-size: 18px;
+}
+
+.btnIniciarSesion:hover{
+  background: #2FA4D8;
+}
+
+@media all and (min-width:768px){
+  main{
+    margin-left: 200px;
+  }
+
+  .formPrincipal{
+    width: 20rem;
+  }
+
+  .formPrincipal input{
+    font-size: 18px;
+  }
+}
+
+@media all and (min-width:992px){
+  main{
+    margin-left: 250px;
+  }
+
+  .formPrincipal{
+    width: 25rem;
+  }
+}
+
+@media all and (min-width:992px){
+  main{
+    margin-left: 275px;
+  }
+
+  .formPrincipal{
+    width: 30rem;
+  }
+}
