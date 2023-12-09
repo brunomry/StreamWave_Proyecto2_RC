@@ -33,13 +33,42 @@ body{
   max-width: 12.5rem;
   min-height: 12.5rem;
   max-height: 21.8rem;
-  background-color: #030303;
+  background-color: #030406;
   color: #fff;
   border-radius: 8px;
   margin-right: 10px; 
   padding: 20px;
   scroll-snap-align: start;
+  cursor: pointer;
 }
+
+.tarjetaCancion:hover{
+  background:#000;
+}
+
+.btnReproducirCancion{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom:0;
+  right: 0;
+  margin: 0px 20px 20px 10px;
+  cursor: pointer;
+  background: #000;
+  border-radius: 100%;
+}
+
+.btnReproducirCancion i:hover{
+  color: #128b05;
+}
+
+.bi-play-circle-fill::before{
+  width: 40px;
+  height: 40px;
+  font-size: 41px;
+  color: #158809;
+}
+
 
 @media all and (min-width:768px){
   main{
