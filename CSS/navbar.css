@@ -5,11 +5,11 @@
 }
 
 .navbarHorizontal{
-    background-color: #06080F;
+    background-color: #101527;
     color: white;
 }
 .linksLG{
-    border-bottom: 3px solid #06080F;
+    border-bottom: 3px solid #101527;
     font-size: 17.5px;
 }
 .linksLG:hover{
@@ -22,7 +22,7 @@
     margin-right: 100px;
 }
 .offCanvasNavbar{
-    background-color: #06080F;
+    background-color: #101527;
 }
 .offcanvas{
     width: 80px;
