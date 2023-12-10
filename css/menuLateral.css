@@ -22,9 +22,11 @@
 .btnMenuLateralLG{
     border: 2px solid #101527 ;
 }
-
-.btnMenuLateralLG:hover{
-    border: 2px solid #7df2ff;
+.btnMenuLateralIniciarSesion{
+    background-color: #3ab9f0;
+}
+.btnMenuLateralIniciarSesion:hover{
+    background-color: #2FA4D8;
 }
 .iconosMenuLateral{
     font-size: 30px;
