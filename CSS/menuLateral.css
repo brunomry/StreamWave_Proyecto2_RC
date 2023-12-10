@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbarIndexHorizontal{
+    background-color: #101527;
+}
+.offCanvasNavbarIndex{
+    background-color: #101527;
+}
+.iconoNavbarIndexMD{
+    font-size: 20px;
+}
+.menuLateral{
+    background-color: #101527;
+    width: 250px;
+    height: 101vh; 
+    border-right: 2px solid #7df2ff;
+    font-size: 17.5px;
+}
+.btnMenuLateralLG{
+    border: 2px solid #101527 ;
+}
+.btnMenuLateralIniciarSesion{
+    background-color: #3ab9f0;
+}
+.btnMenuLateralIniciarSesion:hover{
+    background-color: #2FA4D8;
+}
+.iconosMenuLateral{
+    font-size: 30px;
+}
+.separadorHamburguesa{
+    color: #7df2ff;
+}
+.logoNavPequeño{
+    width: 140px;
+}
+.logoNavGrande{
+    width: 180px;
+}
+@media all and (min-width: 768px) and (max-width: 991px){
+    .menuLateral{
+        width: 200px;
+        font-size: 14px;
+    }
+    .menuLateral a{
+        font-size: 14px;
+    }
+    .logoNavGrande{
+        width: 140px;
+    }
+}

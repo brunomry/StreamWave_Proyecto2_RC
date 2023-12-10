@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./CSS/menuLateral.css" />
+  </head>
+  <body>
+    <header class="headerLateral">
+      <!-- navbar de resolucion MD o menor -->
+      <nav class="navbar navbar-dark fixed-top d-md-none navbarIndexHorizontal">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html"><img src="./IMG/logo_350_x_500.png" alt="Logo de Stream Wave" class="logoNavPequeño"></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header offCanvasNavbarIndex">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <img src="./IMG/logo_350_x_500.png" alt="Logo de Stream Wave" class="logoNavPequeño">
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body offCanvasNavbarIndex">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-center"
+                    aria-current="page"
+                    href="./index.html"
+                    ><i class="bi bi-house-door iconoNavbarIndexMD"></i> Inicio</a
+                  >
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="#"><i class="bi bi-music-note-list iconoNavbarIndexMD"></i> Tu biblioteca</a>
+                </li>     
+                <li>
+                  <hr class="separadorHamburguesa opacity-100">
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="#">Iniciar sesión</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="#">Registrarse</a>
+                </li>
+                <!-- Aqui estaria la seccion de administrar cuenta una vez iniciada la sesion -->
+                <li class="nav-item dropdown d-none">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Cuenta
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Administrar cuenta</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar de resolucion LG o mayor -->
+      <nav
+        class="navbar-dark navbar navbar-expand-md d-none d-md-block px-3 py-3 menuLateral"
+      >
+        <div class="container-fluid d-flex flex-column align-items-start">
+          <div class="logo mb-5 ms-2">
+            <a class="navbar-brand" href="./index.html"><img src="./IMG/logo_350_x_500.png" alt="Logo de Stream Wave" class="logoNavGrande"></a>
+          </div>
+          <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                ><i class="bi bi-house-door iconosMenuLateral"></i> Inicio</a
+              >
+            </li>
+            <li class="nav-item mb-5">
+              <a class="nav-link" href="#"><i class="bi bi-music-note-list iconosMenuLateral"></i> Tu biblioteca</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-column">
+            <li class="nav-item mb-2 ms-1">
+              <button class="btn btnMenuLateralLG btnMenuLateralIniciarSesion">
+                <a class="nav-link active" href="#">Iniciar sesión</a>
+              </button>
+            </li>
+            <li class="nav-item mb-2 ms-1">
+              <button class="btn btn-secondary btnMenuLateralLG">
+                <a class="nav-link active" href="#">Registrarse</a>
+              </button>
+            </li>
+            <li class="text-light">
+              <p>Accede a tu cuenta para crear y compartir playlists, obtener recomendaciones personalizadas y mucho mas.</p>
+            </li>
+          </ul>
+          <!-- abajo está el icono de usuario que aparece una vez iniciada la sesion -->
+          <ul class="navbar-nav mb-2 mb-lg-0 botonDropdown d-none">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-user fa-xl"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Administrar cuenta</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main></main>
+    <footer></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/f8e26b913a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
