@@ -5,22 +5,22 @@
 }
 
 .navbarIndexHorizontal{
-    background-color: #06080F;
+    background-color: #101527;
 }
 .offCanvasNavbarIndex{
-    background-color: #06080F;
+    background-color: #101527;
 }
 .iconoNavbarIndexMD{
     font-size: 20px;
 }
 .menuLateral{
-    background-color: #06080F;
+    background-color: #101527;
     width: 250px;
     height: 100vh; 
     border-right: 2px solid #7df2ff;
 }
 .btnMenuLateralLG{
-    border: 2px solid #06080F ;
+    border: 2px solid #101527 ;
 }
 
 .btnMenuLateralLG:hover{
@@ -32,8 +32,11 @@
 .separadorHamburguesa{
     color: #7df2ff;
 }
+.logoNavPequeño{
+    width: 140px;
+}
 .logoNavGrande{
-    
+    width: 180px;
 }
 @media all and (min-width: 768px) and (max-width: 991px){
     .menuLateral{
@@ -43,5 +46,7 @@
     .menuLateral a{
         font-size: 14px;
     }
-
+    .logoNavGrande{
+        width: 140px;
+    }
 }
