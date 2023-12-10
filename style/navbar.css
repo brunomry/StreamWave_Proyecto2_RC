@@ -10,6 +10,7 @@
 }
 .linksLG{
     border-bottom: 3px solid #06080F;
+    font-size: 17.5px;
 }
 .linksLG:hover{
     border-bottom: 3px solid #7df2ff;
