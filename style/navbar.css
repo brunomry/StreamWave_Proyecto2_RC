@@ -26,9 +26,17 @@
 .offcanvas{
     width: 80px;
 }
-
+.logoNavPequeño{
+    width: 140px;
+}
+.logoNavGrande{
+    width: 180px;
+}
 @media all and (min-width: 768px) and (max-width: 992px){
     .linksLG{
         font-size: 11px;
+    }
+    .logoNavGrande{
+        width: 140px;
     }
 }
