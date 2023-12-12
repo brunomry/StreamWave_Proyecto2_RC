@@ -1,14 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/administracion.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../CSS/administracion.css" />
     <title>StreamWave</title>
-</head>
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+  </head>
+  <body>
+    <header></header>
+    <main class="container my-4">
+      <div class="d-flex align-items-center justify-content-between">
+        <h1>Lista de Canciones registradas</h1>
+        <button
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#modalCancion"
+          id="btnNuevaCancion"
+        >
+          Nueva Canción
+        </button>
+      </div>
+      <section class="table-responsive mt-4">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Código</th>
+              <th scope="col">Título de Canción</th>
+              <th scope="col">Artista o Grupo</th>
+              <th scope="col" class="d-none d-lg-table-cell">Categoría</th>
+              <th scope="col" class="d-none d-lg-table-cell">Duración</th>
+              <th scope="col" class="text-center">Opciones</th>
+            </tr>
+          </thead>
+          <tbody id="tablaCancion">
+            <tr>
+              <td>sd98123ad</td>
+              <td>Save your tears</td>
+              <td>The Weekend</td>
+              <td class="d-none d-lg-table-cell">Pop</td>
+              <td class="d-none d-lg-table-cell">04:26 min</td>
+              <td class="fixed-width-buttons">
+                <div class="d-flex flex-wrap">
+                  <a
+                    class="btn btnVerMas mx-1 mb-1"
+                    href="./PAGES/verMasDetalleCancion.html"
+                    >Ver más</a
+                  >
+                  <button class="btn btnEditar mx-1 mb-1">Editar</button>
+                  <button class="btn btnEliminar mx-1 mb-1">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>i82394ausd</td>
+              <td>Blinding Lights</td>
+              <td>The Weekend</td>
+              <td class="d-none d-lg-table-cell">Pop</td>
+              <td class="d-none d-lg-table-cell">03:32 min</td>
+              <td class="fixed-width-buttons">
+                <div class="d-flex flex-wrap">
+                  <a
+                    class="btn btnVerMas mx-1 mb-1"
+                    href="./PAGES/verMasDetalleCancion.html"
+                    >Ver más</a
+                  >
+                  <button class="btn btnEditar mx-1 mb-1">Editar</button>
+                  <button class="btn btnEliminar mx-1 mb-1">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

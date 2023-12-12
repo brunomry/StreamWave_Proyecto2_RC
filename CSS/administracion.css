@@ -1,0 +1,32 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.btnVerMas{
+    background-color: #85B8FF;
+    color: #fff;
+}
+.btnVerMas:hover{
+    background-color: #579DFF;
+    color: #fff;
+}
+
+.btnEditar{
+    background-color: #F5CD47;
+    color: black;
+}
+.btnEditar:hover{
+    background-color: #F9B635;
+    color: black;
+}
+.btnEliminar{
+    background-color: #e65168;
+    color: #fff;
+}
+.btnEliminar:hover{
+    background-color: #cf475c;
+    color: #fff;
+}
+.fixed-width-buttons button, a {
+    width: 90px;
+    display: inline-block
+}
