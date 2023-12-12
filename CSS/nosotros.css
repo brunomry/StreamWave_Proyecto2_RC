@@ -5,6 +5,7 @@ body{
     Overflow-x: hidden
   }
   
-  .equipo-img {
-    width: 200px; /* Tamaño deseado en píxeles */
-    height: 300px;}
+  .imagenPerfil{
+    width: 225px;
+    height: 225px;
+  }
