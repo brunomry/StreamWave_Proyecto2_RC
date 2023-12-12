@@ -56,6 +56,37 @@
                   />
                 </div>
               </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="categoria" class="form-label">Categoría</label>
+                  <select id="categoria" class="form-select" required>
+                    <option value="seleccione" disabled selected>Seleccione</option>
+                    <option value="nuevos lanzamientos">Nuevos Lanzamientos</option>
+                    <option value="lo más escuchado">Lo más escuchado</option>
+                    <option value="clásicos inolvidables">
+                      Clásicos inolvidables
+                    </option>
+                    <option value="rock nacional">Rock Nacional</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="anioLanzamiento" class="form-label"
+                    >Año de lanzamiento:</label
+                  >
+                  <input
+                    type="text"
+                    id="anioLanzamiento"
+                    name="anioLanzamiento"
+                    class="form-control"
+                    placeholder="Ej: 2012"
+                    minlength="4"
+                    maxlength="4"
+                    required
+                  />
+                </div>
+              </div>
             </form>
         </section>
     </main>
