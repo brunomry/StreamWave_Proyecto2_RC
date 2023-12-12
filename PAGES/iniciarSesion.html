@@ -22,36 +22,43 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div id="fondoModal" class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel"><img id="imgLogo"
+                    <div class="modal-header justify-content-center">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"><img class="img-fluid"
                                 src="../IMG/logo_350_x_500.png" alt="imagen del logo"></h1>
                     </div>
                     <div class="modal-body">
                         <h3 class="textoBlanco text-center">Iniciar sesión en Stream Wave</h3>
-                        <div class="row">
-                            <a href="#" class="marginStart btn btn-danger btn-block mb-2 col-md-10 col-10 col-xs-10"><i class="bi bi-envelope-fill"></i> Continuar con
+                        <div class="row justify-content-center">
+                            <a href="#" class="btn btn-danger btn-block mb-2 col-md-10 col-10 col-xs-10"><i
+                                    class="bi bi-envelope-fill"></i> Continuar con
                                 Gmail</a>
-                            <a href="#" class="marginStart btn btn-primary btn-block col-md-10 col-10"><i class="bi bi-facebook"></i> Continuar con
+                            <a href="#" class="btn btn-primary btn-block col-md-10 col-10"><i
+                                    class="bi bi-facebook"></i> Continuar con
                                 Facebook</a>
                         </div>
                     </div>
                     <hr class="textoBlanco mx-4">
                     <h3 class="textoBlanco text-center">Ingresá tu correo y contraseña</h3>
                     <form action="">
-                        <div class="row">
-                            <input type="email" placeholder="Email" minlength="10" maxlength="40"
-                                class="marginStart col-md-10 col-10 my-3 py-2">
-                            <input type="password" placeholder="Contraseña" minlength="8" maxlength="14"
-                                class="marginStart col-md-10 col-10 py-2">
+                        <div class="form-floating mb-3 ms-4 me-4">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com">
+                            <label for="floatingInput">Correo electrónico</label>
                         </div>
-                        <input type="checkbox" name="" id="" class="inputRecuerdame"><label class="textoBlanco ms-2" for=""> Recuérdame</label><br>
-                        <button id="botonIniciarSesion" type="submit" class="btn btn-outline-info col-md-4 my-4 col-4">Iniciar sesión</button>
+                        <div class="form-floating ms-4 me-4">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="contraseña">
+                            <label for="floatingPassword">Contraseña</label>
+                        </div>
+                        <input type="checkbox" name="" id="" class="inputRecuerdame"><label class="textoBlanco ms-2"
+                            for=""> Recuérdame</label><br>
+                        <button id="botonIniciarSesion" type="submit"
+                            class="btn btn-outline-info col-md-4 my-4 col-4">Iniciar sesión</button>
                     </form>
                     <a class="linksFormulario text-center" href="#">¿Olvidaste tu contraseña?</a>
                     <div class="row">
-                        <p class="linkRegistrar textoBlanco">¿No tienes cuenta?<a class="linksFormulario" href="#">Regístrate</a></p>
+                        <p class="linkRegistrar textoBlanco">¿No tienes cuenta?<a class="linksFormulario"
+                                href="#">Regístrate</a></p>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
