@@ -22,13 +22,30 @@
             <div class="modal-dialog">
                 <div class="modal-content"> <!--bg-dark -->
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel"><img src="../IMG/logo_350_x_500.png"
-                                alt="imagen del logo"></h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"><img id="imgLogo"
+                                src="../IMG/logo_350_x_500.png" alt="imagen del logo"></h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <h2 class="text-center">Iniciar sesión en Stream Wave</h2>
+                        <div class="row">
+                            <a href="#" class="marginStart btn btn-primary btn-block mb-2 col-md-10">Iniciar con Facebook</a>
+                            <a href="#" class="marginStart btn btn-danger btn-block col-md-10">Iniciar con Gmail</a>
+                        </div>
                     </div>
+                    <hr class="mx-4">
+                    <h5 class="text-center">Ingresá tu correo y tu contraseña</h5>
+                    <form action="">
+                        <div class="row">
+                            <input type="email" placeholder="Email" minlength="10" maxlength="40"
+                                class="marginStart col-md-10 my-3 py-2">
+                            <input type="password" placeholder="Contraseña" minlength="8" maxlength="14"
+                                class="marginStart col-md-10 py-2">
+                        </div>
+                        <input type="checkbox" name="" id="" class=""> Recuérdame <br>
+
+                        <button type="submit" class="col-md-4 ms-5 my-4">Iniciar sesión</button>
+                    </form>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
