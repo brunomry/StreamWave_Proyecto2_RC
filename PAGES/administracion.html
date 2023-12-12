@@ -149,7 +149,6 @@
                   <input
                     type="text"
                     id="anioLanzamiento"
-                    name="anioLanzamiento"
                     class="form-control"
                     placeholder="Ej: 2012"
                     minlength="4" 
@@ -158,45 +157,44 @@
                   />
                 </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                <label for="duracion" class="form-label">Duración:</label>
-                <input
-                  type="text"
-                  id="duracion"
-                  name="duracion"
-                  class="form-control"
-                  pattern="[0-5][0-9]:[0-5][0-9]"
-                  placeholder="Ej: 03:20" required title="Formato requerido: mm:ss"
-                />
-              </div>
-              </div>
-                <div class="row">
                   <div class="col-md-6">
-                    <div class="form-group">
+                    <div class="mb-3">
                       <label for="imagenPortada" class="form-label">Imagen de portada:</label>
                       <input
                     type="url"
                     id="imagenPortada"
-                    name="imagenPortada"
                     class="form-control"
-                    placeholder="url de imagen" required
+                    placeholder="URL de imagen" 
+                    required
                       />
                   </div>
                 </div>
                   <div class="col-md-6">
-                    <div class="form-group">
+                    <div class="mb-3">
                       <label for="cancion" class="form-label">Canción:</label>
                       <input
                       type="url"
                       id="cancion"
-                      name="cancion"
                       class="form-control"
-                      placeholder="url de la canción" required
+                      placeholder="URL de la canción" required
                       />
                   </div>
                   </div>
-                  </div>
+                  <div class="col-md-5 text-md-center mx-auto">
+                  <label for="duracion" class="form-label">Duración:</label>
+                  <input
+                    type="text"
+                    id="duracion"
+                    class="form-control pe-0"
+                    pattern="[0-5][0-9]:[0-5][0-9]"
+                    placeholder="Ej: 03:20"
+                    minlength="5"
+                    maxlength="5"
+                    required
+                  />
+                  <span class="input-group-text">min</span>
+                </div>
+                </div>
                   <div class="form-group">
                 <button class="btn btn-primary mx-5" type="submit">Agregar canción</button>
                 <button class="btn btn-secondary" type="button">Cancelar</button>
