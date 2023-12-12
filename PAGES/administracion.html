@@ -85,6 +85,133 @@
       </div>
     </section>
     </main>
+    <div
+        class="modal"
+        id="modalCancion"
+        tabindex="-1"
+        aria-labelledby="modalCancionLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Alta de Canciones</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Completa los campos que se muestran a continuación con la información correspondiente.</p>
+              <form>
+                <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="tituloCancion" class="form-label">Título de Canción:</label>
+                      <input
+                    type="text"
+                    id="tituloCancion"
+                    name="tituloCancion"
+                    class="form-control"
+                    placeholder="Título de canción" required
+                      />
+                  </div>
+                </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="artistaGrupo" class="form-label">Artista o Grupo:</label>
+                      <input
+                      type="text"
+                      id="artistaGrupo"
+                      name="artistaGrupo"
+                      class="form-control"
+                      placeholder="Artista o grupo" required
+                      />
+                  </div>
+                  </div>
+                  </div>
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                  <label for="categoria" class="form-label">Categoría</label>
+                  <select
+                    id="categoria"
+                    name="categoria"
+                    class="form-control"
+                    placeholder="Categoría" required>
+                    <option value="" disabled selected>Selecciona una categoría</option>
+                    <option value="rock">Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="indie">Indie</option>
+                  </select>
+                </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                  <label for="añoLanzamiento" class="form-label">Año de lanzamiento:</label>
+                  <input
+                    type="text"
+                    pattern="\d{4}"
+                    id="añoLanzamiento"
+                    name="añoLanzamiento"
+                    class="form-control"
+                    placeholder="Ej: 2012" required maxlength="4"
+                  />
+                </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                <label for="duracion" class="form-label">Duración:</label>
+                <input
+                  type="text"
+                  id="duracion"
+                  name="duracion"
+                  class="form-control"
+                  pattern="[0-5][0-9]:[0-5][0-9]"
+                  placeholder="Ej: 03:20" required title="Formato requerido: mm:ss"
+                />
+              </div>
+              </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="imagenPortada" class="form-label">Imagen de portada:</label>
+                      <input
+                    type="url"
+                    id="imagenPortada"
+                    name="imagenPortada"
+                    class="form-control"
+                    placeholder="url de imagen" required
+                      />
+                  </div>
+                </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="cancion" class="form-label">Canción:</label>
+                      <input
+                      type="url"
+                      id="cancion"
+                      name="cancion"
+                      class="form-control"
+                      placeholder="url de la canción" required
+                      />
+                  </div>
+                  </div>
+                  </div>
+                  <div class="form-group">
+                <button class="btn btn-primary mx-5" type="submit">Agregar canción</button>
+                <button class="btn btn-secondary" type="button">Cancelar</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     <footer></footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
