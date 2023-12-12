@@ -1,7 +1,3 @@
-.marginStart{
-    margin-left: 40px;
-}
-
 #fondoModal{
     background-color: #06080F;
 }
@@ -10,3 +6,6 @@
     color: white;
 }
 
+.linksPreguntas{
+    color: #7df2ff;
+}
