@@ -1,0 +1,16 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #101527;
+}
+
+@media all and (min-width:768px){
+    .formVerMas{
+        width: 725px;
+    }
+}
+
+@media all and (min-width:992px){
+    .formVerMas{
+        width: 800px;
+    }
+}
