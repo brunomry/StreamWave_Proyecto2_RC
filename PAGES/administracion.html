@@ -86,7 +86,7 @@
         aria-labelledby="modalCancionLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
+        <div class="modal-dialog bg-white rounded-3">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Alta de Canciones</h5>
@@ -99,18 +99,19 @@
             </div>
             <div class="modal-body">
               <p>Completa los campos que se muestran a continuación con la información correspondiente.</p>
-              <form>
-                <div class="container">
-                <div class="row">
+              <form class="row">
                   <div class="col-md-6">
-                    <div class="form-group">
+                    <div class="mb-3">
                       <label for="tituloCancion" class="form-label">Título de Canción:</label>
                       <input
                     type="text"
                     id="tituloCancion"
                     name="tituloCancion"
                     class="form-control"
-                    placeholder="Título de canción" required
+                    placeholder="Título de canción"
+                    minlength="1"
+                    maxlength="15" 
+                    required
                       />
                   </div>
                 </div>
