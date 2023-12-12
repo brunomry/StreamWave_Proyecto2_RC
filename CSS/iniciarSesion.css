@@ -17,9 +17,12 @@
 }
 
 #botonIniciarSesion{
-    margin-left: 160px;
+    margin-left: 170px;
 }
 
 .inputRecuerdame{
     margin-left: 350px;
+}
+.linksFormulario{
+    color: #7df2ff;
 }
