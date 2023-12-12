@@ -11,3 +11,16 @@
 #fondoModal{
     background-color: #06080F;
 }
+
+.textoBlanco{
+    color: white;
+}
+
+#botonIniciarSesion{
+    background-color: aqua;
+    margin-left: 160px;
+}
+
+.inputRecuerdame{
+    margin-left: 350px;
+}
