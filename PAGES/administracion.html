@@ -143,16 +143,18 @@
                   </select>
                 </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                  <label for="añoLanzamiento" class="form-label">Año de lanzamiento:</label>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                  <label for="anioLanzamiento" class="form-label">Año de lanzamiento:</label>
                   <input
                     type="text"
-                    pattern="\d{4}"
-                    id="añoLanzamiento"
-                    name="añoLanzamiento"
+                    id="anioLanzamiento"
+                    name="anioLanzamiento"
                     class="form-control"
-                    placeholder="Ej: 2012" required maxlength="4"
+                    placeholder="Ej: 2012"
+                    minlength="4" 
+                    maxlength="4"
+                    required
                   />
                 </div>
                 </div>
