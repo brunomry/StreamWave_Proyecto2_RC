@@ -16,3 +16,27 @@ body{
     }
   }
   
+
+  @media all and (min-width:992px){
+    p{
+      font-size: 20px;
+    }
+    }
+
+    article{
+      width: inherit;
+    }
+  
+    .imagenPerfil{
+      width: 250px;
+      height: 250px;
+    }
+  
+  
+  @media all and (min-width:1200px){
+    .imagenPerfil{
+      width: 300px;
+      height: 300px;
+    }
+  }
+  
