@@ -18,7 +18,7 @@
   <body>
     <header></header>
     <main class="my-5">
-      <div class="container px-0" id="contenedorCatalogo">
+      <div class="container px-0 my-5" id="contenedorCatalogo">
         <div class="d-flex justify-content-between mx-2">
           <form
             class="d-flex px-3 ps-md-0 formPrincipal"
@@ -41,8 +41,20 @@
           </div>
         </div>
       </div>
-      <audio src="" controls="controls"  preload="none">
-    </audio>
+      <section class="container-fluid d-flex flex-column flex-wrap align-content-center flex-md-row">
+        <div class="ms-md-4" id="imgCancion">
+          <img src="../IMG/imagendePrueba.jpeg" class="img-fluid" alt="Imagen de cancion">
+        </div>
+        <div class="ms-md-4">
+          <ul class="list-unstyled">
+            <li class="mt-3"><h2>Titulo de Cancion</h2></li>
+            <li class="mt-5">Artista/grupo</li>
+            <li class="mt-3">Categoría</li>
+            <li class="mt-3">Año</li>
+            <li class="mt-3">Duración</li>
+          </ul>
+        </div>
+      </section>
     </main>
     <footer></footer>
     <script
