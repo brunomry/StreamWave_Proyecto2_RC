@@ -1,75 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/iniciarSesion.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../CSS/iniciarSesion.css" />
     <title>Document</title>
-</head>
-
-<body>
+  </head>
+  <body>
     <main>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Launch demo modal
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div id="fondoModal" class="modal-content">
-                    <div class="modal-header justify-content-center">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel"><img class="img-fluid"
-                                src="../IMG/logo_350_x_500.png" alt="imagen del logo"></h1>
-                    </div>
-                    <div class="modal-body">
-                        <h3 class="textoBlanco text-center">Iniciar sesión en Stream Wave</h3>
-                        <div class="row justify-content-center">
-                            <a href="#" class="btn btn-danger btn-block mb-2 col-md-10 col-10 col-xs-10"><i
-                                    class="bi bi-envelope-fill"></i> Continuar con
-                                Gmail</a>
-                            <a href="#" class="btn btn-primary btn-block col-md-10 col-10"><i
-                                    class="bi bi-facebook"></i> Continuar con
-                                Facebook</a>
-                        </div>
-                    </div>
-                    <hr class="linksPreguntas mx-4">
-                    <h3 class="textoBlanco text-center">Ingresá tu correo y contraseña</h3>
-                    <form action="">
-                        <div class="form-floating mb-3 ms-4 me-4">
-                            <input type="email" class="form-control" id="floatingInput"
-                                placeholder="nombre@ejemplo.com">
-                            <label for="floatingInput">Correo electrónico</label>
-                        </div>
-                        <div class="form-floating ms-4 me-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="contraseña">
-                            <label for="floatingPassword">Contraseña</label>
-                        </div>
-                        <div class="text-end me-4 pt-3">
-                            <input type="checkbox" name="" id="">
-                            <label class="textoBlanco" for=""> Recuérdame</label><br>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-outline-info my-4">Iniciar sesión</button>
-                        </div>
-                    </form>
-
-                    <div class="text-center">
-                    <a class="linksPreguntas" href="#">¿Olvidaste tu contraseña?</a>
-                        <p class="textoBlanco">¿No tienes cuenta? <a class="linksPreguntas" href="#">Regístrate</a></p>
-                    </div>
-
-                </div>
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#modalIniciarSesion"
+      >
+        Iniciar Sesión
+      </button>
+      <div
+        class="modal fade"
+        id="modalIniciarSesion"
+        tabindex="-1"
+        aria-labelledby="modalIniciarSesion"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div
+              class="modal-header justify-content-center contenedorLogo mx-auto"
+            >
+              <img
+                class="imagenLogo"
+                src="../IMG/logo_350_x_500.png"
+                alt="logo"
+                width="225"
+                height="125"
+              />
             </div>
+            <div class="modal-body">
+              <h2 class="text-center mb-4 fw-bold">
+                Iniciar sesión en Stream Wave
+              </h2>
+              <a
+                href="error404.html"
+                class="btn btn-danger d-flex align-items-center justify-content-center gap-3 mb-2 mx-sm-3 py-2 rounded-4"
+                ><i class="fa-brands fa-google fs-4 d-none d-md-block"></i
+                ><span class="text-center fw-bold"
+                  >Continuar con Google</span
+                ></a
+              >
+              <a
+                href="error404.html"
+                class="btn btn-primary d-flex align-items-center justify-content-center gap-3 mx-sm-3 py-2 rounded-4"
+                ><i class="fa-brands fa-facebook-f fs-4 d-none d-md-block"></i
+                ><span class="text-center fw-bold"
+                  >Continuar con Facebook</span
+                ></a
+              >
+            </div>
+            <hr class="mx-4" />
+            <p class="text-center mb-3 fw-bold fs-5">
+              Ingresá tu correo y contraseña
+            </p>
+            <form class="mx-2">
+              <div class="form-floating mb-3 mx-2 mx-sm-4">
+                <input
+                  type="email"
+                  class="form-control rounded-4"
+                  id="correo"
+                  placeholder="usuario@ejemplo.com"
+                  minlength="4"
+                  maxlength="265"
+                  required
+                />
+                <label for="floatingInput">Correo electrónico</label>
+              </div>
+              <div class="form-floating mx-2 mx-sm-4">
+                <input
+                  type="password"
+                  class="form-control rounded-4"
+                  id="clave"
+                  minlength="8"
+                  placeholder="Contraseña"
+                  required
+                />
+                <label for="floatingPassword">Contraseña</label>
+              </div>
+              <div class="me-4 py-3 text-end">
+                <input type="checkbox" id="recuerdame" required />
+                <label class="textoBlanco" for="recuerdame">Recuérdame</label>
+              </div>
+              <div class="mb-4 d-flex">
+                <button
+                  type="submit"
+                  class="btn btnIniciarSesion mx-2 mx-sm-4 fw-bold text-white rounded-4"
+                >
+                  Iniciar sesión
+                </button>
+              </div>
+            </form>
+            <div class="text-center d-flex flex-column gap-4">
+              <a class="recuperarContrasenia" href="error404.html"
+                >¿Olvidaste tu contraseña?</a
+              >
+              <span class="mb-2"
+                >¿No tienes cuenta?
+                <a class="registrate" href="error404.html">Regístrate</a></span
+              >
+            </div>
+          </div>
         </div>
+      </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/d74da69b43.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
