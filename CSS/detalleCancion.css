@@ -17,6 +17,14 @@ body {
 .btnIniciarSesion:hover {
   background: #2fa4d8;
 }
+.btnAgregarCancion {
+  background: #3ab9f0;
+  font-size: 18px;
+}
+
+.btnAgregarCancion:hover {
+  background: #2fa4d8;
+}
 
 @media all and (min-width: 768px) {
   main {
