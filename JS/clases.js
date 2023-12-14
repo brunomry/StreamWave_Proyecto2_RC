@@ -78,4 +78,16 @@ export class Cancion {
   get getCancion(){
     return this.#cancion;
   }
+  toJSON(){
+    return {
+      id: this.getId,
+      categoria: this.getCategoria,
+      titulo: this.getTitulo,
+      artista: this.getArtista,
+      anio: this.getAnio,
+      duracion: this.getDuracion,
+      imagen: this.getImagen,
+      cancion: this.getCancion
+    }
+  }
 }
