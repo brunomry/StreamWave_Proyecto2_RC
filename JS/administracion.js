@@ -1,5 +1,5 @@
 import db from "./db.js";
-import { Cancion } from "./clases.js";
+import { Cancion } from "../JS/CLASES/claseCancion.js";
 
 const canciones = db.canciones || [];
 
