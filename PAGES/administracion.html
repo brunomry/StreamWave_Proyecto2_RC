@@ -31,7 +31,7 @@
   <body>
     <header></header>
     <main>
-      <section class="container my-4">
+      <section class="container my-5">
         <div
           class="d-flex flex-column gap-3 align-items-center justify-content-between flex-lg-row"
         >
@@ -49,19 +49,21 @@
         </div>
         <div class="table-responsive mt-4">
           <table
-            class="table table-bordered table-dark table-striped border border-1"
+            class="table table-bordered table-dark table-striped border border-1 text-center"
           >
-            <thead>
+            <thead class="text-center">
               <tr>
                 <th scope="col">Código</th>
                 <th scope="col">Título</th>
                 <th scope="col">Artista o Grupo</th>
-                <th scope="col" class="d-none d-lg-table-cell">Categoría</th>
-                <th scope="col" class="d-none d-lg-table-cell">Duración</th>
-                <th scope="col" class="text-center">Opciones</th>
+                <th scope="col">Categoría</th>
+                <th scope="col" class="d-none d-lg-table-cell">Duración (min)</th>
+                <th scope="col" class="d-none d-lg-table-cell">Año</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Opciones</th>
               </tr>
             </thead>
-            <tbody id="tablaCancion"></tbody>
+            <tbody id="tablaCancion" class="align-middle"></tbody>
           </table>
         </div>
       </section>
