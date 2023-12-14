@@ -72,7 +72,7 @@ export class Cancion {
   }
 
   set setCancion (cancion){
-    this.#categoria = cancion;
+    this.#cancion = cancion;
   }
 
   get getCancion(){
