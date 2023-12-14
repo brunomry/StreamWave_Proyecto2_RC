@@ -61,36 +61,7 @@
                 <th scope="col" class="text-center">Opciones</th>
               </tr>
             </thead>
-            <tbody id="tablaCancion">
-              <tr>
-                <td>sd98123ad</td>
-                <td>Save your tears</td>
-                <td>The Weekend</td>
-                <td class="d-none d-lg-table-cell">Pop</td>
-                <td class="d-none d-lg-table-cell">04:26 min</td>
-                <td
-                  class="text-center text-dark d-flex flex-column flex-md-row align-items-center justify-content-center gap-1"
-                >
-                  <button class="btn btnVerMas mx-1 mb-1">Ver más</button>
-                  <button class="btn btnEditar mb-1">Editar</button>
-                  <button class="btn btnEliminar mx-1 mb-1">Eliminar</button>
-                </td>
-              </tr>
-              <tr>
-                <td>i82394ausd</td>
-                <td>Blinding Lights</td>
-                <td>The Weekend</td>
-                <td class="d-none d-lg-table-cell">Pop</td>
-                <td class="d-none d-lg-table-cell">03:32 min</td>
-                <td
-                  class="text-center text-dark d-flex flex-column flex-md-row align-items-center justify-content-center gap-1"
-                >
-                  <button class="btn btnVerMas mx-1 mb-1">Ver más</button>
-                  <button class="btn btnEditar mb-1">Editar</button>
-                  <button class="btn btnEliminar mx-1 mb-1">Eliminar</button>
-                </td>
-              </tr>
-            </tbody>
+            <tbody id="tablaCancion"></tbody>
           </table>
         </div>
       </section>
@@ -213,7 +184,8 @@
               </div>
               <div class="col-md-5 text-md-center mx-auto">
                 <label for="duracion" class="form-label">Duración:</label>
-                <input
+                <div class="mb-4 input-group">
+                  <input
                   type="text"
                   id="duracion"
                   class="form-control pe-0"
@@ -222,18 +194,21 @@
                   minlength="5"
                   maxlength="5"
                   required
-                />
-                <span class="input-group-text">min</span>
+                  />
+                  <span class="input-group-text">min</span>
+                </div>
+              </div>
+              <div
+                class="mb-3 d-flex flex-column flex-sm-row px-5 justify-content-center gap-2"
+              >
+                <button class="btn btn-primary px-5" type="submit">
+                  Agregar
+                </button>
+                <button class="btn btn-secondary px-5" type="button">
+                  Cancelar
+                </button>
               </div>
             </form>
-          </div>
-          <div
-            class="mb-3 d-flex flex-column flex-sm-row px-5 justify-content-center gap-2"
-          >
-            <button class="btn btn-primary px-5" type="submit">Agregar</button>
-            <button class="btn btn-secondary px-5" type="button">
-              Cancelar
-            </button>
           </div>
         </div>
       </div>
@@ -244,5 +219,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="../JS/administracion.js" type="module"></script>
   </body>
 </html>

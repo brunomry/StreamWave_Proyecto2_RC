@@ -8,7 +8,7 @@ export class Cancion {
   #imagen;
   #cancion;
 
-  constructor(id, categoria, titulo, artista, anio, duracion, imagen, cancion){
+  constructor(id, categoria, titulo, artista, anio, duracion, imagen, cancion) {
     this.#id = id;
     this.#categoria = categoria;
     this.#titulo = titulo;
@@ -19,63 +19,75 @@ export class Cancion {
     this.#cancion = cancion;
   }
 
-  get getId(){
+  get getId() {
     return this.#id;
   }
 
-  set setCategoria (categoria){
+  set setCategoria(categoria) {
     this.#categoria = categoria;
   }
 
-  get getCategoria(){
+  get getCategoria() {
     return this.#categoria;
   }
 
-  set setTitulo (titulo){
+  set setTitulo(titulo) {
     this.#titulo = titulo;
   }
 
-  get getTitulo(){
+  get getTitulo() {
     return this.#titulo;
   }
 
-  set setArtista (artista){
+  set setArtista(artista) {
     this.#artista = artista;
   }
 
-  get getArtista(){
+  get getArtista() {
     return this.#artista;
   }
 
-  set setAnio(anio){
+  set setAnio(anio) {
     this.#anio = anio;
   }
 
-  get getAnio(){
+  get getAnio() {
     return this.#anio;
   }
 
-  set setDuracion (duracion){
+  set setDuracion(duracion) {
     this.#duracion = duracion;
   }
 
-  get getDuracion(){
+  get getDuracion() {
     return this.#duracion;
   }
 
-  set setImagen(imagen){
+  set setImagen(imagen) {
     this.#imagen = imagen;
   }
 
-  get getImagen(){
+  get getImagen() {
     return this.#imagen;
   }
 
-  set setCancion (cancion){
-    this.#categoria = cancion;
+  set setCancion(cancion) {
+    this.#cancion = cancion;
   }
 
-  get getCancion(){
+  get getCancion() {
     return this.#cancion;
+  }
+  toJSON() {
+    return {
+      id: this.getId,
+      categoria: this.getCategoria,
+      titulo: this.getTitulo,
+      artista: this.getArtista,
+      anio: this.getAnio,
+      duracion: this.getDuracion,
+      imagen: this.getImagen,
+      cancion: this.getCancion,
+    };
   }
 }
