@@ -1,4 +1,4 @@
-import db from "./db.js";
+import db from "../JS/db.js";
 import { Cancion } from "../JS/CLASES/claseCancion.js";
 
 const canciones = db.canciones || [];
@@ -36,8 +36,15 @@ const guardarEnLocalstorage = () => {
   localStorage.setItem("cancionesKey", JSON.stringify(canciones));
 };
 
-const limpiarFormulario = () => {
-  formularioCanciones.reset();
-};
+const limpiarFormulario = () => formularioCanciones.reset();
+
+const cargarFilas = () => {
+  canciones.length 
+    ? canciones.map((cancion, posicion) => {
+      // agregarFila(cancion, posicion + 1)
+      })
+    : null
+}
 
 formularioCanciones.addEventListener("submit", crearCancion);
+cargarFilas();
