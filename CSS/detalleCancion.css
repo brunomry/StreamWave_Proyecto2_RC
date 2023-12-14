@@ -83,7 +83,8 @@ body {
 
 @media all and (min-width: 768px) {
   main {
-    margin-left: 200px;
+    margin-left: 250px;
+    width: 75%;
   }
 
   .formPrincipal {
@@ -93,21 +94,32 @@ body {
   .formPrincipal input {
     font-size: 18px;
   }
+  footer{
+    margin-left:200px;
+  }
 }
 
 @media all and (min-width: 992px) {
   main {
     margin-left: 250px;
+    max-width: 100%;
+    padding:20px
   }
 
   .formPrincipal {
     width: 25rem;
   }
+  footer{
+    margin-left:250px;
+  }
 }
 
-@media all and (min-width: 992px) {
+@media all and (min-width: 1200px) {
   main {
     margin-left: 275px;
+  }
+  footer{
+    margin-left:275px;
   }
 
   .formPrincipal {
