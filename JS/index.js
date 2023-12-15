@@ -18,3 +18,15 @@ const crearTarjetaCancion = (cancion) => {
   tarjeta.innerHTML = tarjetaHTML;
   return tarjeta;
 };
+
+const crearSeccion = (categoria) => {
+  const seccion = document.createElement('section');
+  seccion.classList.add('mt-5');
+
+  const h2 = document.createElement('h2');
+  h2.classList.add('mb-4', 'ms-3', 'ms-md-0');
+  h2.textContent = categoria;
+  seccion.appendChild(h2);
+
+  return seccion;
+}
