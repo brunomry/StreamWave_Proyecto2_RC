@@ -78,7 +78,13 @@ window.eliminarCancion = (idCancion) => {
   console.log(posicionCancionBuscada);
 
   //elimino del arreglo la cancion
-  canciones.splice(posicionCancionBuscada,1)
+  canciones.splice(posicionCancionBuscada,1);
+  guardarEnLocalstorage();
+
+  //borro la fila de la tabla
+  const tablaCancion = document.querySelector('tbody');
+  console.log(tablaCancion.children[posicionCancionBuscada])
+  tablaCancion.removeChild(tablaCancion.children[posicionCancionBuscada])
 
 }
 
