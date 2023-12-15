@@ -1,14 +1,15 @@
 import db from "../JS/db.js";
 import { Cancion } from "../JS/CLASES/claseCancion.js";
 
-let canciones = [];
+const canciones = JSON.parse(localStorage.getItem("cancionesKey")) || []
 
-const cargarCancionesDesdeLocalStorage = () => {
-  const cancionesLocalStorage = JSON.parse(localStorage.getItem('cancionesKey'));
-  cancionesLocalStorage && cancionesLocalStorage.length > 0 ? canciones = cancionesLocalStorage : canciones = db.canciones;
-};
+const cargarDB = () =>{
+  localStorage.setItem("cancionesKey", JSON.stringify(db.canciones))
+  localStorage.setItem("categorias", JSON.stringify(db.categorias))
+  localStorage.setItem("usuarios", JSON.stringify(db.usuarios))
+}
 
-cargarCancionesDesdeLocalStorage();
+cargarDB()
 
 const formularioCanciones = document.querySelector("form");
 
@@ -73,9 +74,11 @@ const agregarFila = (cancion, posicion) => {
 window.eliminarCancion = (idCancion) => {
 
   //busco por id la cancion y guardo su posicion
-  const posicionCancionBuscada = canciones.findIndex((cancion) => cancion.id === id.cancion);
+  const posicionCancionBuscada = canciones.findIndex((cancion) => cancion.id === idCancion);
   console.log(posicionCancionBuscada);
 
+  //elimino del arreglo la cancion
+  canciones.splice(posicionCancionBuscada,1)
 
 }
 
