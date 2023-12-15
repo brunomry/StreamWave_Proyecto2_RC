@@ -334,8 +334,10 @@ const crearTarjetaCancion = (cancion) => {
   return tarjeta;
 };
 
+const seccion = document.createElement('section');
+
 const crearSeccion = (categoria) => {
-  const seccion = document.createElement('section');
+ 
   seccion.classList.add('mt-5');
 
   const h2 = document.createElement('h2');
@@ -372,4 +374,56 @@ JSON.parse(localStorage.getItem("categorias")).forEach((categoria) => {
   seccion.appendChild(article);
 
   contenedorCatalogo.appendChild(seccion);
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const formularioBusqueda = document.getElementById('formPrincipal');
+  const filtroInput = document.getElementById('inputBusqueda');
+
+  formularioBusqueda.addEventListener('keyup', (e) => {
+    e.preventDefault();
+    const filtro = filtroInput.value.toUpperCase();
+
+    if (filtro === '') {
+      const seccionAnterior = document.getElementById('seccionBusqueda');
+      if (seccionAnterior) {
+        seccionAnterior.remove();
+      }
+      seccion.classList.toggle("d-none");
+      contenedorCatalogo.appendChild(seccion);
+      return;
+    }
+
+    const seccionAnterior = document.getElementById('seccionBusqueda');
+    if (seccionAnterior) {
+      seccionAnterior.remove();
+    }
+
+    const seccionBusqueda = document.createElement("section");
+    seccionBusqueda.id = 'seccionBusqueda';
+    seccionBusqueda.classList.add("d-flex", "flex-wrap", "gap-2", "contenedorCanciones","pt-5");
+
+    canciones.forEach((cancion) => {
+      const titulo = cancion.titulo.toUpperCase();
+      const artista = cancion.artista.toUpperCase();
+      if (titulo.startsWith(filtro) || artista.startsWith(filtro)) {
+        const tarjeta = crearTarjetaCancion(cancion);
+        seccionBusqueda.appendChild(tarjeta);
+      }
+    });
+   
+    if(seccionBusqueda.childElementCount === 0){
+      const p = document.createElement("p")
+      p.classList.add("ms-2")
+      p.textContent = "No se encontraron resultados";
+      seccionBusqueda.appendChild(p)
+      contenedorCatalogo.appendChild(seccionBusqueda)
+    }else{
+      contenedorCatalogo.appendChild(seccionBusqueda);
+    }
+
+    seccion.classList.add("d-none");
+    
+  });
 });
