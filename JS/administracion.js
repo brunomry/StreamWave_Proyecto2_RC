@@ -72,3 +72,7 @@ const agregarFila = (cancion, posicion) => {
 
 formularioCanciones.addEventListener("submit", crearCancion);
 cargarFilas();
+
+window.eliminarCancion = () => {
+
+}
