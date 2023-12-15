@@ -1,15 +1,15 @@
 import db from "../JS/db.js";
 import { Cancion } from "../JS/CLASES/claseCancion.js";
 
-const canciones = JSON.parse(localStorage.getItem("cancionesKey")) || []
+const canciones = JSON.parse(localStorage.getItem("cancionesKey")) || [];
 
-const cargarDB = () =>{
-  localStorage.setItem("cancionesKey", JSON.stringify(db.canciones))
-  localStorage.setItem("categorias", JSON.stringify(db.categorias))
-  localStorage.setItem("usuarios", JSON.stringify(db.usuarios))
-}
+const cargarDB = () => {
+  localStorage.setItem("cancionesKey", JSON.stringify(db.canciones));
+  localStorage.setItem("categorias", JSON.stringify(db.categorias));
+  localStorage.setItem("usuarios", JSON.stringify(db.usuarios));
+};
 
-cargarDB()
+cargarDB();
 
 const formularioCanciones = document.querySelector("form");
 
@@ -34,7 +34,7 @@ const crearCancion = (e) => {
     cancion.value
   );
   canciones.push(cancionNueva);
-  agregarFila(cancionNueva,canciones.length);
+  agregarFila(cancionNueva, canciones.length);
   guardarEnLocalstorage();
   limpiarFormulario();
 };
@@ -46,10 +46,10 @@ const guardarEnLocalstorage = () => {
 const limpiarFormulario = () => formularioCanciones.reset();
 
 const cargarFilas = () => {
-  canciones.length > 0 
+  canciones.length > 0
     ? canciones.map((cancion, posicion) => agregarFila(cancion, posicion + 1))
-    : null
-}
+    : null;
+};
 
 const agregarFila = (cancion, posicion) => {
   const tablaCancion = document.querySelector("#tablaCancion");
@@ -69,24 +69,40 @@ const agregarFila = (cancion, posicion) => {
                                   <button class="btn btnEliminar" onclick="eliminarCancion('${cancion.id}')">Eliminar</button>
                                 </td>
                               </tr>`;
-}
+};
 
 window.eliminarCancion = (idCancion) => {
+  Swal.fire({
+    title: "¿Estas seguro de querer borrar esta canción?",
+    text: "Una vez borrada la canción no podrás volver atrás",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Eliminar",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const posicionCancionBuscada = canciones.findIndex(
+        (cancion) => cancion.id === idCancion
+      );
+      console.log(posicionCancionBuscada);
 
-  //busco por id la cancion y guardo su posicion
-  const posicionCancionBuscada = canciones.findIndex((cancion) => cancion.id === idCancion);
-  console.log(posicionCancionBuscada);
+      canciones.splice(posicionCancionBuscada, 1);
+      guardarEnLocalstorage();
 
-  //elimino del arreglo la cancion
-  canciones.splice(posicionCancionBuscada,1);
-  guardarEnLocalstorage();
+      const tablaCancion = document.querySelector("tbody");
+      console.log(tablaCancion.children[posicionCancionBuscada]);
+      tablaCancion.removeChild(tablaCancion.children[posicionCancionBuscada]);
 
-  //borro la fila de la tabla
-  const tablaCancion = document.querySelector('tbody');
-  console.log(tablaCancion.children[posicionCancionBuscada])
-  tablaCancion.removeChild(tablaCancion.children[posicionCancionBuscada])
-
-}
+      Swal.fire({
+        title: "Canción eliminada con éxito",
+        text: "La canción seleccionada fué eliminada con éxito",
+        icon: "success",
+      });
+    }
+  });
+};
 
 formularioCanciones.addEventListener("submit", crearCancion);
 cargarFilas();
