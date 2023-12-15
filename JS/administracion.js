@@ -70,9 +70,14 @@ const agregarFila = (cancion, posicion) => {
                               </tr>`;
 }
 
-formularioCanciones.addEventListener("submit", crearCancion);
-cargarFilas();
+window.eliminarCancion = (idCancion) => {
 
-window.eliminarCancion = () => {
+  //busco por id la cancion y guardo su posicion
+  const posicionCancionBuscada = canciones.findIndex((cancion) => cancion.id === id.cancion);
+  console.log(posicionCancionBuscada);
+
 
 }
+
+formularioCanciones.addEventListener("submit", crearCancion);
+cargarFilas();
