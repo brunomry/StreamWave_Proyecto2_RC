@@ -8,13 +8,13 @@ const cancionEncontrada = canciones.find(cancion =>  cancion.id === idCancion);
 
 const form = document.getElementById("formDetalleCancion")
 
-const categoria = form.querySelector("#categoria");
-const titulo = form.querySelector("#tituloCancion");
-const artista = form.querySelector("#artistaGrupo");
-const anio = form.querySelector("#anioLanzamiento");
-const imagen = form.querySelector("#imagenPortada");
-const cancion = form.querySelector("#cancion");
-const duracion = form.querySelector("#duracion");
+const categoria = document.querySelector("#categoria");
+const titulo = document.querySelector("#tituloCancion");
+const artista = document.querySelector("#artistaGrupo");
+const anio = document.querySelector("#anioLanzamiento");
+const imagen = document.querySelector("#imagenPortada");
+const cancion = document.querySelector("#cancion");
+const duracion = document.querySelector("#duracion");
 
 for (let i = 0; i < categoria.options.length; i++) {
   if (categoria.options[i].textContent === cancionEncontrada.categoria) {
