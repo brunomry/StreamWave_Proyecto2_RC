@@ -91,7 +91,7 @@ const db = {
   usuarios: [],
   canciones: [
     new Cancion(
-      crypto.randomUUID(),
+      "ca1631d9-11d2-43b3-a956-09d5039f3d29",
       "Lo más escuchado",
       "Blinding Lights",
       "The Weekend",
@@ -101,27 +101,7 @@ const db = {
       "https://www.youtube.com/watch?v=fHI8X4OXluQ"
     ),
     new Cancion(
-      crypto.randomUUID(),
-      "Lo más escuchado",
-      "Blinding Lights",
-      "The Weekend",
-      "2020",
-      "03:23",
-      "https://lh3.googleusercontent.com/R_cjQK3wwLPEzri1jerx-79zgzGocoKvwGU3NMONaTsaMM0Idd641pfB8r5jgfpn6I8JAoFtf9RBIcI",
-      "https://www.youtube.com/watch?v=fHI8X4OXluQ"
-    ),
-    new Cancion(
-      crypto.randomUUID(),
-      "Lo más escuchado",
-      "Blinding Lights",
-      "The Weekend",
-      "2020",
-      "03:23",
-      "https://lh3.googleusercontent.com/R_cjQK3wwLPEzri1jerx-79zgzGocoKvwGU3NMONaTsaMM0Idd641pfB8r5jgfpn6I8JAoFtf9RBIcI",
-      "https://www.youtube.com/watch?v=fHI8X4OXluQ"
-    ),
-    new Cancion(
-      crypto.randomUUID(),
+      "d117287f-7a02-470d-bb49-3ccd0b24d655",
       "Lo más escuchado",
       "Me siento mucho mejor",
       "Charly García",
@@ -131,7 +111,7 @@ const db = {
       "https://www.youtube.com/watch?v=O9UNtY89fvY"
     ),
     new Cancion(
-      crypto.randomUUID(),
+      "eed0987c-1050-4745-ab39-3f46c13d1ced",
       "Lo más escuchado",
       "Save your tears",
       "The Weekend",
@@ -141,7 +121,7 @@ const db = {
       "https://www.youtube.com/watch?v=XXYlFuWEuKI&list=RD1xcSDYy3Dl4&index=2"
     ),
     new Cancion(
-      crypto.randomUUID(),
+      "e16a1153-daf6-4619-8f76-652e571fffdc",
       "Lo más escuchado",
       "As it was",
       "Harry Styles",
@@ -151,7 +131,7 @@ const db = {
       "https://www.youtube.com/watch?v=H5v3kku4y6Q"
     ),
     new Cancion(
-      crypto.randomUUID(),
+      "a35c6ff6-0af6-4462-b2ec-ed7c33031f0e",
       "Lo más escuchado",
       "Peaches",
       "Justin Bieber",
@@ -161,7 +141,7 @@ const db = {
       "https://www.youtube.com/watch?v=tQ0yjYUFKAE"
     ),
     new Cancion(
-      crypto.randomUUID(),
+      "574bf8e0-4260-4fa2-a35d-0d955b2850da",
       "Lo más escuchado",
       "Dance Monkey",
       "Tones and I",
@@ -171,7 +151,7 @@ const db = {
       "https://www.youtube.com/watch?v=q0hyYWKXF0Q"
     ),
     new Cancion(
-      crypto.randomUUID(),
+      "e6dbe1a7-085a-462c-916b-663f35f397e6",
       "Clásicos inolvidables",
       "You Give Love A Bad Name",
       "Bon Jovi",
@@ -181,7 +161,7 @@ const db = {
       "https://www.youtube.com/watch?v=KrZHPOeOxQQ"
     ),
     new Cancion(
-      crypto.randomUUID(),
+      "15ca04ff-7237-46fc-a1ea-0a5afc5bc9dc",
       "Clásicos inolvidables",
       "Livin' On A Prayer",
       "Bon Jovi",
@@ -191,7 +171,7 @@ const db = {
       "https://www.youtube.com/watch?v=lDK9QqIzhwk"
     ),
     new Cancion(
-      crypto.randomUUID(),
+      "91a7303c-6921-46e5-8243-2ea4ed0fdd50",
       "Clásicos inolvidables",
       "Take on me",
       "A-ha",
@@ -201,7 +181,7 @@ const db = {
       "https://www.youtube.com/watch?v=djV11Xbc914"
     ),
     new Cancion(
-      crypto.randomUUID(),
+      "1096c77e-2cfe-4a50-b713-4ab060d91b7b",
       "Clásicos inolvidables",
       "Sweet Dreams",
       "Eurythmics",
@@ -211,7 +191,7 @@ const db = {
       "https://www.youtube.com/watch?v=qeMFqkcPYcg"
     ),
     new Cancion(
-      crypto.randomUUID(),
+      "1f29648b-961e-4f44-a08c-5b9a0482c7fc",
       "Clásicos inolvidables",
       "Beat it",
       "Michael Jackson",
@@ -222,7 +202,7 @@ const db = {
       ""
     ),
     new Cancion(
-      crypto.randomUUID(),
+      "d11c4358-361b-43c0-aded-9f367b62485a",
       "Clásicos inolvidables",
       "Self Control",
       "Laura Branigan",
@@ -232,7 +212,7 @@ const db = {
       ""
       ),
       new Cancion(
-        crypto.randomUUID(),
+        "882e6170-699f-40a2-92b0-4314bc8bdf38",
         "Clásicos inolvidables",
         "Everybody's Changing",
         "Keane",
@@ -242,7 +222,7 @@ const db = {
         "https://www.youtube.com/watch?v=RSNmgE6L8AU"
       ),
       new Cancion(
-        crypto.randomUUID(),
+        "f63b6f9e-43a2-42bc-b1dc-4994c302b41a",
         "Rock Nacional",
         "Arde la ciudad",
         "Mancha de rolando",
@@ -252,7 +232,7 @@ const db = {
         "https://www.youtube.com/watch?v=-8vxXsfbxj4"
       ),
       new Cancion(
-        crypto.randomUUID(),
+        "45e36913-b8f2-4c1d-92af-4c7fe2bc20bf",
         "Rock Nacional",
         "Mi gin tonic",
         "Andrés Calamaro",
@@ -262,7 +242,7 @@ const db = {
         "https://www.youtube.com/watch?v=BP1Ksv35oek"
       ),
       new Cancion(
-        crypto.randomUUID(),
+        "9cb74080-c34a-4d5f-9df4-cd757aa673e1",
         "Rock Nacional",
         "Mil horas",
         "Los abuelos de la nada",
@@ -272,7 +252,7 @@ const db = {
         "https://www.youtube.com/watch?v=U5yU2KPw1WY"
       ),
       new Cancion(
-        crypto.randomUUID(),
+        "ae27901c-c988-4d72-b59b-2a7c0ca14474",
         "Rock Nacional",
         "Trenes, camiones y tractores",
         "Árbol",
@@ -282,7 +262,7 @@ const db = {
         "https://www.youtube.com/watch?v=uYU9w-5oNXM"
       ),
       new Cancion(
-        crypto.randomUUID(),
+        "b86ac001-2587-485b-9a86-19494b1ef0b3",
         "Rock Nacional",
         "Pasos al costado",
         "Turf",
@@ -292,7 +272,7 @@ const db = {
         "https://www.youtube.com/watch?v=TJkmo1PzfJg"
       ),
       new Cancion(
-        crypto.randomUUID(),
+        "dbf6b8f9-e64a-41a0-9345-6a7def468032",
         "Rock Nacional",
         "Nada fue un error",
         "Coti",
@@ -315,8 +295,14 @@ const cargarDB = () =>{
 cargarDB()
 // LINEAS DE ARRIBA SE VAN EN DEV }
 
+const verCancion = idTarjeta => {
+  idTarjeta = idTarjeta.trim();
+  window.location.href =
+    window.location.origin + `/PAGES/detalleCancion.html?id=${idTarjeta}`;
+}
+
 const crearTarjetaCancion = (cancion) => {
-  const tarjetaHTML = `<div class="card tarjetaCancion p-3 mb-2">
+  const tarjetaHTML = `<div class="card tarjetaCancion p-3 mb-2" id="${cancion.id}">
                         <div class="d-flex flex-column position-relative">
                           <img src="${cancion.imagen}" class="card-img-top rounded-2" alt="${cancion.titulo}" />
                           <div class="btnReproducirCancion">
@@ -331,6 +317,9 @@ const crearTarjetaCancion = (cancion) => {
 
   const tarjeta = document.createElement('div');
   tarjeta.innerHTML = tarjetaHTML;
+
+  tarjeta.addEventListener('click', () => verCancion(cancion.id))
+
   return tarjeta;
 };
 
