@@ -15,3 +15,16 @@ const anio = form.querySelector("#anioLanzamiento");
 const imagen = form.querySelector("#imagenPortada");
 const cancion = form.querySelector("#cancion");
 const duracion = form.querySelector("#duracion");
+
+for (let i = 0; i < categoria.options.length; i++) {
+  if (categoria.options[i].textContent === cancionEncontrada.categoria) {
+      categoria.selectedIndex = i;
+      break;
+  }
+}
+titulo.value = cancionEncontrada.titulo;
+artista.value = cancionEncontrada.artista;
+anio.value = cancionEncontrada.anio;
+imagen.value = cancionEncontrada.imagen;
+cancion.value = cancionEncontrada.cancion;
+duracion.value = cancionEncontrada.duracion;
