@@ -9,3 +9,56 @@ const opcionesUsuarioMenuLateral1 = document.getElementById(
 const opcionesUsuarioMenuLateral2 = document.getElementById(
   `opcionesUsuarioMenuLateral2`
 );
+
+// Se declaran funciones y variables
+function verificarRolUsuario() {
+    if (sesionActual.length > 0) {
+      let usuarioEncontrado = sesionActual[0];
+      if (usuarioEncontrado.rol_ === "administrador") {
+        console.log("El usuario ingresado tiene permisos de administrador");
+        opcionesSinUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 d-flex flex-column d-none`;
+        opcionesConUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 botonDropdown`;
+        opcionesSinUsuarioMD.className = `d-none`;
+        opcionesConUsuarioMD.className = `nav-item dropdown text-center`;
+        opcionesUsuarioMenuLateral1.innerHTML = `
+        <li>
+          <a class="dropdown-item" href="../PAGES/administracion.html">Administrar</a>
+          </li>
+          <li>
+              <a class="dropdown-item" onClick="cerrarSesion()">Cerrar sesión</a>
+          </li>`;
+        opcionesUsuarioMenuLateral2.innerHTML = `
+      <li>
+          <a class="dropdown-item" href="../PAGES/administracion.html">Administrar</a>
+          </li>
+          <li>
+              <a class="dropdown-item" onClick="cerrarSesion()">Cerrar sesión</a>
+          </li>`;
+      } else if (usuarioEncontrado.rol_ === "usuario") {
+        console.log("El usuario ingresado no tiene permisos de administrador");
+        opcionesSinUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 d-flex flex-column d-none`;
+        opcionesConUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 botonDropdown`;
+        opcionesSinUsuarioMD.className = `d-none`;
+        opcionesConUsuarioMD.className = `nav-item dropdown text-center`;
+        opcionesConUsuarioMD.className = `nav-item dropdown text-center`;
+        opcionesUsuarioMenuLateral1.innerHTML = `
+        <li>
+          <a class="dropdown-item" href="../PAGES/error404">Administrar cuenta</a>
+          </li>
+          <li>
+              <a class="dropdown-item" onClick="cerrarSesion()">Cerrar sesión</a>
+          </li>`;
+        opcionesUsuarioMenuLateral2.innerHTML = `
+      <li>
+          <a class="dropdown-item" href="../PAGES/error404">Administrar cuenta</a>
+          </li>
+          <li>
+              <a class="dropdown-item" onClick="cerrarSesion()">Cerrar sesión</a>
+          </li>`;
+      }
+    } else {
+      console.log("No has iniciado sesion");
+      opcionesSinUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 d-flex flex-column`;
+      opcionesConUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 botonDropdown d-none`;
+    }
+  }
