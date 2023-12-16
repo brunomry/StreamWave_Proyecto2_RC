@@ -23,14 +23,20 @@ function verificarRolUsuario() {
       opcionesSinUsuarioMD.className = `d-none`;
       opcionesConUsuarioMD.className = `nav-item dropdown text-center`;
       opcionesUsuarioNavHorizontal1.innerHTML = `<li>
-        <a class="dropdown-item" href="../PAGES/administracion.html">Administrar</a>
+        <a class="dropdown-item" href="../PAGES/administracion.html">Administración</a>
       </li>
+      <li>
+          <a class="dropdown-item" href="../PAGES/error404.html">Administrar cuenta</a>
+          </li>
       <li>
         <a class="dropdown-item btnCerrarSesion" onClick="cerrarSesion()">Cerrar sesión</a>
       </li>`;
       opcionesUsuarioNavHorizontal2.innerHTML = `<li>
-        <a class="dropdown-item" href="../PAGES/administracion.html">Administrar</a>
+        <a class="dropdown-item" href="../PAGES/administracion.html">Administración</a>
       </li>
+      <li>
+          <a class="dropdown-item" href="../PAGES/error404.html">Administrar cuenta</a>
+          </li>
       <li>
         <a class="dropdown-item btnCerrarSesion" onClick="cerrarSesion()">Cerrar sesión</a>
       </li>
@@ -42,7 +48,7 @@ function verificarRolUsuario() {
       opcionesSinUsuarioMD.className = `d-none`;
       opcionesConUsuarioMD.className = `nav-item dropdown text-center`;
       opcionesUsuarioNavHorizontal1.innerHTML = `<li>
-        <a class="dropdown-item" href="../PAGES/error404">Administrar cuenta</a>
+        <a class="dropdown-item" href="../PAGES/error404.html">Administrar cuenta</a>
       </li>
       <li>
         <a class="dropdown-item btnCerrarSesion" onClick="cerrarSesion()">Cerrar sesión</a>
