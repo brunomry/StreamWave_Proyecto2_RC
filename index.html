@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./CSS/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="./CSS/menuLateral.css" />
   </head>
   <body>
@@ -20,7 +20,12 @@
       <!-- navbar de resolucion MD o menor -->
       <nav class="navbar navbar-dark fixed-top d-md-none navbarIndexHorizontal">
         <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html"><img src="./IMG/logo_350_x_500.png" alt="Logo de Stream Wave" class="logoNavPequeño"></a>
+          <a class="navbar-brand" href="./index.html"
+            ><img
+              src="./IMG/logo_350_x_500.png"
+              alt="Logo de Stream Wave"
+              class="logoNavPequeño"
+          /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -39,7 +44,11 @@
           >
             <div class="offcanvas-header offCanvasNavbarIndex">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <img src="./IMG/logo_350_x_500.png" alt="Logo de Stream Wave" class="logoNavPequeño">
+                <img
+                  src="./IMG/logo_350_x_500.png"
+                  alt="Logo de Stream Wave"
+                  class="logoNavPequeño"
+                />
               </h5>
               <button
                 type="button"
@@ -55,23 +64,29 @@
                     class="nav-link active text-center"
                     aria-current="page"
                     href="./index.html"
-                    ><i class="bi bi-house-door iconoNavbarIndexMD"></i> Inicio</a
+                    ><i class="bi bi-house-door iconoNavbarIndexMD"></i>
+                    Inicio</a
                   >
                 </li>
                 <li class="nav-item text-center">
-                  <a class="nav-link" href="#"><i class="bi bi-music-note-list iconoNavbarIndexMD"></i> Tu biblioteca</a>
-                </li>     
+                  <a class="nav-link" href="#"
+                    ><i class="bi bi-music-note-list iconoNavbarIndexMD"></i> Tu
+                    biblioteca</a
+                  >
+                </li>
                 <li>
-                  <hr class="separadorHamburguesa opacity-100">
+                  <hr class="separadorHamburguesa opacity-100" />
                 </li>
-                <li class="nav-item text-center">
-                  <a class="nav-link" href="#">Iniciar sesión</a>
-                </li>
-                <li class="nav-item text-center">
-                  <a class="nav-link" href="#">Registrarse</a>
-                </li>
+                <div id="opcionesSinUsuarioMD">
+                  <li class="nav-item text-center">
+                    <a class="nav-link" href="#">Iniciar sesión</a>
+                  </li>
+                  <li class="nav-item text-center">
+                    <a class="nav-link" href="#">Registrarse</a>
+                  </li>
+                </div>
                 <!-- Aqui estaria la seccion de administrar cuenta una vez iniciada la sesion -->
-                <li class="nav-item dropdown d-none">
+                <li class="nav-item dropdown d-none" id="opcionesConUsuarioMD">
                   <a
                     class="nav-link dropdown-toggle"
                     href="#"
@@ -81,11 +96,7 @@
                   >
                     Cuenta
                   </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#">Administrar cuenta</a>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                  <ul class="dropdown-menu" id="opcionesUsuarioMenuLateral2">
                   </ul>
                 </li>
               </ul>
@@ -99,7 +110,12 @@
       >
         <div class="container-fluid d-flex flex-column align-items-start">
           <div class="logo mb-5 ms-2">
-            <a class="navbar-brand" href="./index.html"><img src="./IMG/logo_350_x_500.png" alt="Logo de Stream Wave" class="logoNavGrande"></a>
+            <a class="navbar-brand" href="./index.html"
+              ><img
+                src="./IMG/logo_350_x_500.png"
+                alt="Logo de Stream Wave"
+                class="logoNavGrande"
+            /></a>
           </div>
           <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-column">
             <li class="nav-item">
@@ -108,10 +124,13 @@
               >
             </li>
             <li class="nav-item mb-5">
-              <a class="nav-link" href="#"><i class="bi bi-music-note-list iconosMenuLateral"></i> Tu biblioteca</a>
+              <a class="nav-link" href="#"
+                ><i class="bi bi-music-note-list iconosMenuLateral"></i> Tu
+                biblioteca</a
+              >
             </li>
           </ul>
-          <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-column">
+          <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-column" id="opcionesSinUsuarioLG">
             <li class="nav-item mb-2 ms-1">
               <button class="btn btnMenuLateralLG btnMenuLateralIniciarSesion">
                 <a class="nav-link active" href="#">Iniciar sesión</a>
@@ -123,11 +142,14 @@
               </button>
             </li>
             <li class="text-light">
-              <p>Accede a tu cuenta para crear y compartir playlists, obtener recomendaciones personalizadas y mucho mas.</p>
+              <p>
+                Accede a tu cuenta para crear y compartir playlists, obtener
+                recomendaciones personalizadas y mucho mas.
+              </p>
             </li>
           </ul>
           <!-- abajo está el icono de usuario que aparece una vez iniciada la sesion -->
-          <ul class="navbar-nav mb-2 mb-lg-0 botonDropdown d-none">
+          <ul class="navbar-nav mb-2 mb-lg-0 botonDropdown d-none" id="opcionesConUsuarioLG">
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -136,13 +158,9 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i class="fa-regular fa-user fa-xl"></i>
+                <i class="fa-regular fa-user fa-xl"></i> <span class="ms-2">Cuenta</span>
               </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">Administrar cuenta</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+              <ul class="dropdown-menu" id="opcionesUsuarioMenuLateral1">
               </ul>
             </li>
           </ul>
@@ -150,80 +168,17 @@
       </nav>
     </header>
     <main></main>
-    <footer class="text-light py-3">
-      <section class="container">
-        <div class="row">
-          <div class="col-lg-3 text-center">
-            <img
-              src="./IMG/logo_350_x_500.png"
-              alt="logo StreamWave"
-              class="imgFooter"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 text-center pt-4">
-            <h4>Empresa</h4>
-            <ul class="list-unstyled list-inline">
-              <li>
-                <a
-                  href="./PAGES/error404.html"
-                  class="link-light link-underline-opacity-0 link-underline-opacity-25-hover text-secondary"
-                  >Acerca de Nosotros</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./PAGES/error404.html"
-                  class="link-light link-underline-opacity-0 link-underline-opacity-25-hover text-secondary"
-                  >Contacto</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 text-center pt-4">
-            <h4>Cuenta</h4>
-            <ul class="list-unstyled">
-              <li>
-                <a
-                  href="./PAGES/error404.html"
-                  class="link-light link-underline-opacity-0 link-underline-opacity-25-hover text-secondary"
-                  >Iniciar sesión</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./PAGES/error404.html"
-                  class="link-light link-underline-opacity-0 link-underline-opacity-25-hover text-secondary"
-                  >Registrarse</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-lg-3 text-center pt-4 iconosFooter">
-            <h4 class="mb-3">Síguenos</h4>
-            <div class="d-flex justify-content-center gap-3">
-            <a href="./PAGES/error404.html" class="link-light"
-              ><i class="fa-brands fa-facebook fs-2"></i></a>
-            <a href="./PAGES/error404.html" class="link-light"
-              ><i class="fa-brands fa-twitter fs-2"></i></a>
-            <a href="./PAGES/error404.html" class="link-light"
-              ><i class="fa-brands fa-instagram fs-2"></i
-            ></a>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-5">
-          <p class="text-light">&copy; Todos los derechos reservados. 2023.</p>
-        </div>
-      </section>
-    </footer>
-    <script
-      src="https://kit.fontawesome.com/d74da69b43.js"
-      crossorigin="anonymous"
-    ></script>
+    <footer></footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/f8e26b913a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/login.js"></script>
+    <script src="./JS/opcionesUsuarioMenuLateral.js"></script>
   </body>
 </html>
