@@ -31,3 +31,20 @@ const modalEditarCancion = new bootstrap.Modal(
 );
 // se define una variable que seleccione el formulario del modal editar
 const formModalEditar = document.querySelector(`#formModalEditar`);
+// variable que guarde el ID de la cancion a editar
+let idCancionEditar = null;
+
+// Funcion para guardar en local Storage
+const guardarEnLocalstorage = () => {
+  localStorage.setItem("cancionesKey", JSON.stringify(canciones));
+};
+
+// Se define un selector de la tabla para la funcion actualizarTabla
+const tablaCancion = document.querySelector("#tablaCancion");
+
+const cargarFilas = () => {
+  tablaCancion.innerHTML = ``
+  canciones.length > 0
+    ? canciones.map((cancion, posicion) => agregarFila(cancion, posicion + 1))
+    : null;
+};
