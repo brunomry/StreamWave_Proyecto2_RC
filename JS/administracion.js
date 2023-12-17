@@ -141,3 +141,5 @@ const editarPropiedadesCancion = (e) => {
     });
   };
   
+  // evento del submit de la ventana modal de editar cancion
+formModalEditar.addEventListener("submit", editarPropiedadesCancion);
