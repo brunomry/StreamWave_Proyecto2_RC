@@ -1,4 +1,4 @@
-import {Cancion} from './CLASES/claseCancion.js'
+import {Cancion} from './claseCancion.js'
 
 const db = {
   usuarios: [],

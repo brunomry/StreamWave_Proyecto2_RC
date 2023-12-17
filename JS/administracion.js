@@ -1,13 +1,17 @@
 import db from "../JS/db.js";
-import { Cancion } from "../JS/CLASES/claseCancion.js";
+import { Cancion } from "./claseCancion.js";
 
 const canciones = JSON.parse(localStorage.getItem("cancionesKey")) || [];
 
 const cargarDB = () => {
-  localStorage.setItem("cancionesKey", JSON.stringify(db.canciones));
-  localStorage.setItem("categorias", JSON.stringify(db.categorias));
-  localStorage.setItem("usuarios", JSON.stringify(db.usuarios));
-};
+   localStorage.setItem("cancionesKey", JSON.stringify(db.canciones));
+   localStorage.setItem("categorias", JSON.stringify(db.categorias));
+   localStorage.setItem("usuarios", JSON.stringify(db.usuarios));
+   location.reload()
+ };
+
+const btnCargarDB = document.querySelector(`#btnCargarDB`)
+btnCargarDB.addEventListener("click", cargarDB)
 
 cargarDB();
 
@@ -20,6 +24,96 @@ const anio = document.querySelector("#anioLanzamiento");
 const imagen = document.querySelector("#imagenPortada");
 const cancion = document.querySelector("#cancion");
 const duracion = document.querySelector("#duracion");
+
+const modalEditarCancion = new bootstrap.Modal(
+  document.getElementById("modalEditarCancion")
+);
+
+const formModalEditar = document.querySelector(`#formModalEditar`);
+
+let idCancionEditar = null;
+
+const guardarEnLocalstorage = () => {
+  localStorage.setItem("cancionesKey", JSON.stringify(canciones));
+};
+
+const tablaCancion = document.querySelector("#tablaCancion");
+
+const cargarFilas = () => {
+  tablaCancion.innerHTML = ``
+  canciones.length > 0
+    ? canciones.map((cancion, posicion) => agregarFila(cancion, posicion + 1))
+    : null;
+};
+
+window.editarCancion = (id) => {
+  idCancionEditar = id;
+  const posicionCancionBuscada = canciones.findIndex(
+    (cancion) => cancion.id === idCancionEditar
+  );
+  document.querySelector("#categoriaEditar").value =
+    canciones[posicionCancionBuscada].categoria;
+  document.querySelector("#tituloCancionEditar").value =
+    canciones[posicionCancionBuscada].titulo;
+  document.querySelector("#artistaGrupoEditar").value =
+    canciones[posicionCancionBuscada].artista;
+  document.querySelector("#anioLanzamientoEditar").value =
+    canciones[posicionCancionBuscada].anio;
+  document.querySelector("#imagenPortadaEditar").value =
+    canciones[posicionCancionBuscada].imagen;
+  document.querySelector("#cancionEditar").value =
+    canciones[posicionCancionBuscada].cancion;
+  document.querySelector("#duracionEditar").value =
+    canciones[posicionCancionBuscada].duracion;
+  modalEditarCancion.show();
+};
+
+const editarPropiedadesCancion = (e) => {
+  e.preventDefault();
+
+  Swal.fire({
+    title: "¿Quieres guardar los cambios?",
+    showDenyButton: true,
+    showCancelButton: false,
+    confirmButtonText: "Guardar cambios",
+    denyButtonText: `No guardar`,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const posicionCancionBuscada = canciones.findIndex(
+        (cancion) => cancion.id === idCancionEditar
+      );
+      canciones[posicionCancionBuscada].categoria =
+        document.querySelector("#categoriaEditar").value;
+      canciones[posicionCancionBuscada].titulo = document.querySelector(
+        "#tituloCancionEditar"
+      ).value;
+      canciones[posicionCancionBuscada].artista = document.querySelector(
+        "#artistaGrupoEditar"
+      ).value;
+      canciones[posicionCancionBuscada].anio = document.querySelector(
+        "#anioLanzamientoEditar"
+      ).value;
+      canciones[posicionCancionBuscada].imagen = document.querySelector(
+        "#imagenPortadaEditar"
+      ).value;
+      canciones[posicionCancionBuscada].cancion =
+        document.querySelector("#cancionEditar").value;
+      canciones[posicionCancionBuscada].duracion =
+        document.querySelector("#duracionEditar").value;
+      guardarEnLocalstorage();
+      cargarFilas();
+      console.log("se guardaron los cambios en local storage")
+      Swal.fire("Cambios guardados correctamente", "", "success");
+
+      modalEditarCancion.hide();
+
+    } else if (result.isDenied) {
+      Swal.fire("Los cambios no fueron guardados", "", "info");
+
+      modalEditarCancion.hide();
+    }
+  });
+};
 
 const crearCancion = (e) => {
   e.preventDefault();
@@ -39,17 +133,7 @@ const crearCancion = (e) => {
   limpiarFormulario();
 };
 
-const guardarEnLocalstorage = () => {
-  localStorage.setItem("cancionesKey", JSON.stringify(canciones));
-};
-
 const limpiarFormulario = () => formularioCanciones.reset();
-
-const cargarFilas = () => {
-  canciones.length > 0
-    ? canciones.map((cancion, posicion) => agregarFila(cancion, posicion + 1))
-    : null;
-};
 
 const agregarFila = (cancion, posicion) => {
   const tablaCancion = document.querySelector("#tablaCancion");
@@ -65,7 +149,7 @@ const agregarFila = (cancion, posicion) => {
                                   class="text-center text-dark d-flex flex-column align-items-center justify-content-center gap-2"
                                 >
                                   <button class="btn btnVerMas" onclick="verDetalleCancion('${cancion.id}')">Ver más</button>
-                                  <button class="btn btnEditar">Editar</button>
+                                  <button class="btn btnEditar" onclick="editarCancion('${cancion.id}')">Editar</button>
                                   <button class="btn btnEliminar" onclick="eliminarCancion('${cancion.id}')">Eliminar</button>
                                 </td>
                               </tr>`;
@@ -112,3 +196,5 @@ window.verDetalleCancion = id => {
 
 formularioCanciones.addEventListener("submit", crearCancion);
 cargarFilas();
+
+formModalEditar.addEventListener("submit", editarPropiedadesCancion);
