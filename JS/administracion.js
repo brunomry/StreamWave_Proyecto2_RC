@@ -12,11 +12,12 @@ const canciones = JSON.parse(localStorage.getItem("cancionesKey")) || [];
 
 
 
-// cargarCancionesDesdeLocalStorage();
+// boton para cargar la base de datos en caso de ser eliminada. Considerar borrarlo antes del merge
 const btnCargarDB = document.querySelector(`#btnCargarDB`)
 btnCargarDB.addEventListener("click", cargarDB)
 
 
+// Selectores de etiqueta necesarios para la funcion agregar cancion
 const formularioCanciones = document.querySelector("form");
 
 const categoria = document.querySelector("#categoria");
@@ -44,6 +45,7 @@ const guardarEnLocalstorage = () => {
 // Se define un selector de la tabla para la funcion actualizarTabla
 const tablaCancion = document.querySelector("#tablaCancion");
 
+// funcion para actualizar la tabla
 const cargarFilas = () => {
   tablaCancion.innerHTML = ``
   canciones.length > 0

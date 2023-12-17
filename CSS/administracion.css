@@ -1,54 +1,40 @@
 *{
     font-family: 'Poppins', sans-serif;
-}
-body{
+  }
+  
+  body{
     background: #101527;
-}
-.btnVerMas{
+  }
+  
+  .btnVerMas{
     width: 100%;
     background-color: #85B8FF;
     padding: 5px 0;
-}
-.btnVerMas:hover{
+  }
+  
+  .btnVerMas:hover{
     background-color: #579DFF;
-}
-
-.btnEditar{
+  }
+  
+  .btnEditar{
     width: 100%;
     background-color: #F5CD47;
-}
-.btnEditar:hover{
+  }
+  
+  .btnEditar:hover{
     background-color: #F9B635;
-}
-.btnEliminar{
+  }
+  
+  .btnEliminar{
     width: 100%;
     background-color: #e65168;
-}
-.btnEliminar:hover{
+  }
+  
+  .btnEliminar:hover{
     background-color: #cf475c;
-}
-
-@media all and (min-width:768px){
-    .btnVerMas{
-        margin-right: 5px;
-        padding: 5px 7px;
-    }
-
-    .btnEditar,
-    .btnEliminar{
-        width: 65%;
-        margin-right: 5px;
-    }
-}
-
-@media all and (min-width:992px){
-    .btnVerMas{
-        margin-right: 5px;
-    }
-
-    .btnEditar,
-    .btnEliminar{
-        width: 80%;
-        margin-right: 5px;
-    }
-}
+  }
+  
+  .imgCancion{
+    width: 100px;
+    height: 100px;
+  }
