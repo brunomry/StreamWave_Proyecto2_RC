@@ -48,3 +48,27 @@ const cargarFilas = () => {
     ? canciones.map((cancion, posicion) => agregarFila(cancion, posicion + 1))
     : null;
 };
+
+// funcion que abre la ventana modal leyendo el id
+window.editarCancion = (id) => {
+    idCancionEditar = id;
+    const posicionCancionBuscada = canciones.findIndex(
+      (cancion) => cancion.id === idCancionEditar
+    );
+    document.querySelector("#categoriaEditar").value =
+      canciones[posicionCancionBuscada].categoria;
+    document.querySelector("#tituloCancionEditar").value =
+      canciones[posicionCancionBuscada].titulo;
+    document.querySelector("#artistaGrupoEditar").value =
+      canciones[posicionCancionBuscada].artista;
+    document.querySelector("#anioLanzamientoEditar").value =
+      canciones[posicionCancionBuscada].anio;
+    document.querySelector("#imagenPortadaEditar").value =
+      canciones[posicionCancionBuscada].imagen;
+    document.querySelector("#cancionEditar").value =
+      canciones[posicionCancionBuscada].cancion;
+    document.querySelector("#duracionEditar").value =
+      canciones[posicionCancionBuscada].duracion;
+    modalEditarCancion.show();
+  };
+  
