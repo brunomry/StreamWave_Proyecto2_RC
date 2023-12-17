@@ -3,13 +3,14 @@ import { Cancion } from "./claseCancion.js";
 
 const canciones = JSON.parse(localStorage.getItem("cancionesKey")) || [];
 
+
+// funcion para cargar en el local storage los elementos guardados en el db
  const cargarDB = () => {
    localStorage.setItem("cancionesKey", JSON.stringify(db.canciones));
    localStorage.setItem("categorias", JSON.stringify(db.categorias));
    localStorage.setItem("usuarios", JSON.stringify(db.usuarios));
    location.reload()
  };
-
 
 
 // boton para cargar la base de datos en caso de ser eliminada. Considerar borrarlo antes del merge
