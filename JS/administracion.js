@@ -72,3 +72,53 @@ window.editarCancion = (id) => {
     modalEditarCancion.show();
   };
   
+
+  // funcion que aplica los cambios realizados en la ventana modal correspondiente al id de la cancion
+
+const editarPropiedadesCancion = (e) => {
+    e.preventDefault();
+  
+    Swal.fire({
+      title: "¿Quieres guardar los cambios?",
+      showDenyButton: true,
+      showCancelButton: false,
+      confirmButtonText: "Guardar cambios",
+      denyButtonText: `No guardar`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const posicionCancionBuscada = canciones.findIndex(
+          (cancion) => cancion.id === idCancionEditar
+        );
+        canciones[posicionCancionBuscada].categoria =
+          document.querySelector("#categoriaEditar").value;
+        canciones[posicionCancionBuscada].titulo = document.querySelector(
+          "#tituloCancionEditar"
+        ).value;
+        canciones[posicionCancionBuscada].artista = document.querySelector(
+          "#artistaGrupoEditar"
+        ).value;
+        canciones[posicionCancionBuscada].anio = document.querySelector(
+          "#anioLanzamientoEditar"
+        ).value;
+        canciones[posicionCancionBuscada].imagen = document.querySelector(
+          "#imagenPortadaEditar"
+        ).value;
+        canciones[posicionCancionBuscada].cancion =
+          document.querySelector("#cancionEditar").value;
+        canciones[posicionCancionBuscada].duracion =
+          document.querySelector("#duracionEditar").value;
+        guardarEnLocalstorage();
+        cargarFilas();
+        console.log("se guardaron los cambios en local storage")
+        Swal.fire("Cambios guardados correctamente", "", "success");
+  
+        modalEditarCancion.hide();
+  
+      } else if (result.isDenied) {
+        Swal.fire("Los cambios no fueron guardados", "", "info");
+  
+        modalEditarCancion.hide();
+      }
+    });
+  };
+  
