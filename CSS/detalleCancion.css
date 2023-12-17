@@ -1,128 +1,120 @@
-/* inicio del estilo del reproductor */
-.containerReproductor {
-  background-color: #101527;
-  border-top: 2px solid #7df2ff;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  color: white;
+html,body{
+  width: 100vw;
+  height: 100vh;
 }
-.containerReproductor h1 {
-  position: absolute;
-  top: 4px;
-  text-align: center;
-  font-size: 16px;
-}
-.containerReproductor .progress_container {
-  position: absolute;
-  bottom: 14px;
-  width: 70%;
-  height: 5px;
-  background-color: #ccc;
-  border-radius: 6px;
-  cursor: pointer;
-  overflow: hidden;
-}
-.containerReproductor #progress {
-  background-color: aqua;
-  width: 0;
-  height: 100%;
-}
-.containerReproductor #current_time {
-  position: absolute;
-  top: 40%;
-  left: 10%;
-}
-.containerReproductor #current_audio {
-  position: absolute;
-  top: 40%;
-  right: 10%;
-}
-.containerReproductor .buttons button {
-  cursor: pointer;
-  border-radius: 20px;
-  padding: 5px 15px 5px 15px;
-}
-/* inicio del estilo del cuerpo de la página */
-body {
+
+body { 
   background-color: #101527;
   color: #fff;
-  overflow-x: hidden;
   font-family: "Poppins", sans-serif;
+}
+
+main{
+  margin-top: 0px;
 }
 
 .formPrincipal {
   width: 100%;
-}
+} 
 
 .btnIniciarSesion {
   background: #3ab9f0;
   font-size: 18px;
+  padding: 11px;
 }
 
 .btnIniciarSesion:hover {
   background: #2fa4d8;
-}
+} 
+
 .btnAgregarCancion {
-  background: #3ab9f0;
+  background: #184f76;
   font-size: 18px;
 }
 
 .btnAgregarCancion:hover {
-  background: #2fa4d8;
+  background: #113855;
 }
 
-@media all and (min-width:279px) and (max-width:575px){
-  #imgCancion{
-    width: 220px;
-  }
+.header{
+  height: 100px;
+  border: none;
 }
 
-@media all and (min-width: 768px) {
-  main {
-    margin-left: 250px;
-    width: 75%;
+@media all and (min-width: 768px) { 
+  .menuLateral{
+    height: 110vh;
+    border-right: 1px solid #2fa4d8;
   }
 
-  .formPrincipal {
-    width: 20rem;
+  .mainDetalleCancion {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  .principal{
+    width: 100vw;
+  }
+
+  .formPrincipal{
+    width: 450px;
   }
 
   .formPrincipal input {
     font-size: 18px;
+    padding: 11px;
   }
-  footer{
-    margin-left:200px;
+
+  #inputBusqueda{
+    font-size: 1rem;
+  }
+
+  .formPrincipal input{
+    font-size: 18px;
   }
 }
 
 @media all and (min-width: 992px) {
-  main {
-    margin-left: 250px;
-    max-width: 100%;
-    padding:20px
+  main{
+    margin-top: 50px;
   }
 
   .formPrincipal {
     width: 25rem;
   }
-  footer{
-    margin-left:250px;
-  }
 }
 
 @media all and (min-width: 1200px) {
-  main {
-    margin-left: 275px;
+  main{
+    margin-top: 200px;
   }
-  footer{
-    margin-left:275px;
+
+  .menuLateral{
+    height: 100vh;
+    border-right: 1px solid #2fa4d8;
+  }
+
+  .ratio-16x9 {
+    max-width: 500px;
+    height: 350px;
   }
 
   .formPrincipal {
     width: 30rem;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  body{
+    overflow: hidden;
+  }
+
+  .header{
+    height: 100vh;
+  }
+
+  .ratio-16x9 {
+    max-width: 600px;
+    height: 350px;
   }
 }
