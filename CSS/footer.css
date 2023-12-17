@@ -1,0 +1,19 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+footer{
+    background-color: #101527;
+}
+
+.imgFooter{ 
+    height: 150px;
+    width: 250px;
+}
+
+.iconosFooter i{
+    color: #aba7a7;
+}
+
+.iconosFooter i:hover{
+    color: #fff;
+}
