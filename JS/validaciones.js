@@ -1,4 +1,4 @@
-const regEx = {
+export const regEx = {
     titulo: '^[a-zA-Z0-9\sáéíóúÁÉÍÓÚüÜñÑ,.!?¿¡()\'-]{1,40}$',
     artista: '^[a-zA-Z0-9\sáéíóúÁÉÍÓÚüÜñÑ,.!?¿¡()\'-]{1,40}$',
     anio: '^\d{4}$',
@@ -20,6 +20,6 @@ const regEx = {
 
   export const validarCategoria = texto => regEx.categoria.test(texto)
 
-  export const validarUrlImagen = texto => regEx.UrlImagen.test(texto)
+  export const validarUrlImagen = texto => regEx.urlImg.test(texto)
 
-  export const validarUrlCancion = texto => regEx.UrlCancion.test(texto)
+  export const validarUrlCancion = texto => regEx.urlCancion.test(texto)

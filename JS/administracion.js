@@ -1,11 +1,12 @@
 import db from "../JS/db.js";
 import { Cancion } from "../JS/CLASES/claseCancion.js";
+import {regEx, validarAnio, validarArtista, validarCategoria, validarDuracion, validarTitulo, validarUrlCancion, validarUrlImagen} from "./validaciones.js"
 
 const canciones = JSON.parse(localStorage.getItem("cancionesKey")) || [];
 
 const cargarDB = () => {
   localStorage.setItem("cancionesKey", JSON.stringify(db.canciones));
-  localStorage.setItem("categorias", JSON.stringify(db.categorias));
+  localStorage.setItem("categorias", JSON.stringify(db.categoria));
   localStorage.setItem("usuarios", JSON.stringify(db.usuarios));
 };
 
@@ -23,21 +24,50 @@ const duracion = document.querySelector("#duracion");
 
 const crearCancion = (e) => {
   e.preventDefault();
-  const cancionNueva = new Cancion(
-    crypto.randomUUID(),
-    categoria.value,
-    titulo.value,
-    artista.value,
-    anio.value,
-    duracion.value,
-    imagen.value,
-    cancion.value
-  );
-  canciones.push(cancionNueva);
-  agregarFila(cancionNueva, canciones.length);
-  guardarEnLocalstorage();
-  limpiarFormulario();
+
+  if (
+    validarTitulo(titulo.value) &&
+    validarAnio(anio.value) &&
+    validarArtista(artista.value) &&
+    validarCategoria(categoria.value) &&
+    validarDuracion(duracion.value) &&
+    validarTitulo(titulo.value) &&
+    validarUrlCancion(cancion.value) &&
+    validarUrlImagen(imagen.value)
+  ) {
+    const cancionNueva = new Cancion(
+      crypto.randomUUID(),
+      categoria.value,
+      titulo.value,
+      artista.value,
+      anio.value,
+      duracion.value,
+      imagen.value,
+      cancion.value
+    );
+
+    const cancionEncontrada = buscarCancion(cancionNueva);
+
+    if (cancionEncontrada) {
+      Swal.fire("La canción que deseas agregar ya existe!");
+    } else {
+      canciones.push(cancionNueva);
+      agregarFila(cancionNueva, canciones.length);
+      guardarEnLocalstorage();
+      limpiarFormulario();
+      Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "La canción fue registrada con éxito",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
+  }
 };
+
+const cambiarPrimeraLetraAmayuscula = texto => texto.charAt(0).toUpperCase() + texto.slice(1);
+const buscarCancion = cancion => canciones.find(cancion => cancion.titulo === cambiarPrimeraLetraAmayuscula(titulo.value) && cancion.artista === cambiarPrimeraLetraAmayuscula(artista.value));
 
 const guardarEnLocalstorage = () => {
   localStorage.setItem("cancionesKey", JSON.stringify(canciones));
@@ -105,4 +135,4 @@ window.eliminarCancion = (idCancion) => {
 };
 
 formularioCanciones.addEventListener("submit", crearCancion);
-cargarFilas();
+cargarFilas()
