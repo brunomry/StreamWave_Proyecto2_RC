@@ -34,3 +34,14 @@ Si vas a clonar el proyecto seguí los siguientes comandos:
 - Reproducción de música en tiempo real.
 - Búsqueda de canciones por título y artista.
 - Se pueden agregar, modificar y eliminar las canciones. 
+
+## Este proyecto fue desarrollado por el siguiente equipo: 🐱‍🚀
+
+| Nombre                              | Perfil GitHub                                            |
+|-------------------------------------|----------------------------------------------------------|
+| María Florencia Gonzalez Iturbe     | [florgonzalez24](https://github.com/florgonzalez24)      |
+| Fernando Herrera                    | [Herrefer](https://github.com/Herrefer)                  |
+| Bruno Madozzo Romay                 | [brunomry](https://github.com/brunomry)                  |
+| Tamara Mariel Omonte Frias          | [Tamara1409](https://github.com/Tamara1409)              |
+| Jeremias Romero                     | [JeremiasRomero22](https://github.com/JeremiasRomero22)  |
+| Ailen Valdez                        | [ailenvaldez](https://github.com/ailenvaldez)            |
