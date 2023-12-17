@@ -9,7 +9,7 @@ const opcionesUsuarioMenuLateral1 = document.getElementById(
 const opcionesUsuarioMenuLateral2 = document.getElementById(
   `opcionesUsuarioMenuLateral2`
 );
-const btnIniciarSesionBody = document.getElementById(`btnIniciarSesionBody`);
+// const btnIniciarSesionBody = document.getElementById(`btnIniciarSesionBody`);
 
 // Se declaran funciones y variables
 function verificarRolUsuario() {
@@ -41,7 +41,7 @@ function verificarRolUsuario() {
           <li>
               <a class="dropdown-item" onClick="cerrarSesion()">Cerrar sesión</a>
           </li>`;
-          btnIniciarSesionBody.hidden = true
+          // btnIniciarSesionBody.hidden = true
     } else if (usuarioEncontrado.rol_ === "usuario") {
       console.log("El usuario ingresado no tiene permisos de administrador");
       opcionesSinUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 d-flex flex-column d-none`;
@@ -63,13 +63,13 @@ function verificarRolUsuario() {
           <li>
               <a class="dropdown-item" onClick="cerrarSesion()">Cerrar sesión</a>
           </li>`;
-          btnIniciarSesionBody.hidden = true
+          // btnIniciarSesionBody.hidden = true
     }
   } else {
     console.log("No has iniciado sesion");
     opcionesSinUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 d-flex flex-column`;
     opcionesConUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 botonDropdown d-none`;
-    btnIniciarSesionBody.hidden = false
+    // btnIniciarSesionBody.hidden = false
   }
 }
 
