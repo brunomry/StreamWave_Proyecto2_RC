@@ -104,5 +104,11 @@ window.eliminarCancion = (idCancion) => {
   });
 };
 
+window.verDetalleCancion = id => {
+  console.log(window.location);
+  window.location.href =
+    window.location.origin + "/PAGES/verMasDetalleCancion.html?id=" + id;
+};
+
 formularioCanciones.addEventListener("submit", crearCancion);
 cargarFilas();
