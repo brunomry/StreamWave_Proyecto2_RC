@@ -28,3 +28,9 @@ Si vas a clonar el proyecto seguí los siguientes comandos:
 1. Crea una rama para tu contribución.
 2. Envía tus cambios a través de una solicitud de extracción (PR).
 3. Asegúrate de que las pruebas unitarias pasen antes de solicitar la fusión.
+
+## Funcionalidades Principales ⚙
+
+- Reproducción de música en tiempo real.
+- Búsqueda de canciones por título y artista.
+- Se pueden agregar, modificar y eliminar las canciones. 
