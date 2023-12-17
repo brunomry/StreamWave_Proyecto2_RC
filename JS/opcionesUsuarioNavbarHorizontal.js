@@ -10,6 +10,7 @@ const opcionesUsuarioNavHorizontal1 = document.getElementById(
 const opcionesUsuarioNavHorizontal2 = document.getElementById(
   `opcionesUsuarioNavHorizontal2`
 );
+const btnIniciarSesionBody = document.getElementById(`btnIniciarSesionBody`)
 
 // Funciones y eventos para verificar el rol del usuario ingresado
 
@@ -41,6 +42,7 @@ function verificarRolUsuario() {
         <a class="dropdown-item btnCerrarSesion" onClick="cerrarSesion()">Cerrar sesión</a>
       </li>
       `;
+      btnIniciarSesionBody.hidden = true
     } else if (usuarioEncontrado.rol === "usuario") {
       console.log("El usuario ingresado no tiene permisos de administrador");
       opcionesSinUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 d-none`;
@@ -53,11 +55,13 @@ function verificarRolUsuario() {
       <li>
         <a class="dropdown-item btnCerrarSesion" onClick="cerrarSesion()">Cerrar sesión</a>
       </li>`;
+      btnIniciarSesionBody.hidden = true
     }
   } else {
     console.log("No has iniciado sesion");
     opcionesSinUsuarioLG.className = `navbar-nav mb-2 mb-lg-0`;
     opcionesConUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 botonDropdown d-none`;
+    btnIniciarSesionBody.hidden = false
   }
 }
 
