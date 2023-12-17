@@ -3,22 +3,18 @@ import { Cancion } from "./claseCancion.js";
 
 const canciones = JSON.parse(localStorage.getItem("cancionesKey")) || [];
 
-
-// funcion para cargar en el local storage los elementos guardados en el db
- const cargarDB = () => {
+const cargarDB = () => {
    localStorage.setItem("cancionesKey", JSON.stringify(db.canciones));
    localStorage.setItem("categorias", JSON.stringify(db.categorias));
    localStorage.setItem("usuarios", JSON.stringify(db.usuarios));
    location.reload()
  };
 
-
-// boton para cargar la base de datos en caso de ser eliminada. Considerar borrarlo antes del merge
 const btnCargarDB = document.querySelector(`#btnCargarDB`)
 btnCargarDB.addEventListener("click", cargarDB)
 
+cargarDB();
 
-// Selectores de etiqueta necesarios para la funcion agregar cancion
 const formularioCanciones = document.querySelector("form");
 
 const categoria = document.querySelector("#categoria");
@@ -28,32 +24,28 @@ const anio = document.querySelector("#anioLanzamiento");
 const imagen = document.querySelector("#imagenPortada");
 const cancion = document.querySelector("#cancion");
 const duracion = document.querySelector("#duracion");
-// se define un variable que seleccione el modal update
+
 const modalEditarCancion = new bootstrap.Modal(
   document.getElementById("modalEditarCancion")
 );
-// se define una variable que seleccione el formulario del modal editar
+
 const formModalEditar = document.querySelector(`#formModalEditar`);
 
-// variable que guarde el ID de la cancion a editar
 let idCancionEditar = null;
 
-// Funcion para guardar en local Storage
 const guardarEnLocalstorage = () => {
   localStorage.setItem("cancionesKey", JSON.stringify(canciones));
 };
 
-// Se define un selector de la tabla para la funcion actualizarTabla
 const tablaCancion = document.querySelector("#tablaCancion");
 
-// funcion para actualizar la tabla
 const cargarFilas = () => {
   tablaCancion.innerHTML = ``
   canciones.length > 0
     ? canciones.map((cancion, posicion) => agregarFila(cancion, posicion + 1))
     : null;
 };
-// funcion que abre la ventana modal leyendo el id
+
 window.editarCancion = (id) => {
   idCancionEditar = id;
   const posicionCancionBuscada = canciones.findIndex(
@@ -75,8 +67,6 @@ window.editarCancion = (id) => {
     canciones[posicionCancionBuscada].duracion;
   modalEditarCancion.show();
 };
-
-// funcion que aplica los cambios realizados en la ventana modal correspondiente al id de la cancion
 
 const editarPropiedadesCancion = (e) => {
   e.preventDefault();
@@ -145,7 +135,6 @@ const crearCancion = (e) => {
 
 const limpiarFormulario = () => formularioCanciones.reset();
 
-
 const agregarFila = (cancion, posicion) => {
   const tablaCancion = document.querySelector("#tablaCancion");
   tablaCancion.innerHTML += `<tr>
@@ -199,8 +188,13 @@ window.eliminarCancion = (idCancion) => {
   });
 };
 
+window.verDetalleCancion = id => {
+  console.log(window.location);
+  window.location.href =
+    window.location.origin + "/PAGES/verMasDetalleCancion.html?id=" + id;
+};
+
 formularioCanciones.addEventListener("submit", crearCancion);
 cargarFilas();
 
-// evento del submit de la ventana modal de editar cancion
 formModalEditar.addEventListener("submit", editarPropiedadesCancion);
