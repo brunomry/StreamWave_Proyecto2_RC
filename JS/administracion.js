@@ -41,7 +41,26 @@ const guardarEnLocalstorage = () => {
 
 // Se define un selector de la tabla para la funcion actualizarTabla
 const tablaCancion = document.querySelector("#tablaCancion");
-
+// Funciones para actualizar la tabla
+const agregarFila = (cancion, posicion) => {
+    const tablaCancion = document.querySelector("#tablaCancion");
+    tablaCancion.innerHTML += `<tr>
+                                  <td>${posicion}</td>
+                                  <td>${cancion.titulo}</td>
+                                  <td>${cancion.artista}</td>
+                                  <td>${cancion.categoria}</td>
+                                  <td class="d-none d-lg-table-cell">${cancion.duracion}</td>
+                                  <td class="d-none d-lg-table-cell">${cancion.anio}</td>
+                                  <td class="text-center"><img class="imgCancion rounded-3" src="${cancion.imagen}"></td>
+                                  <td
+                                    class="text-center text-dark d-flex flex-column align-items-center justify-content-center gap-2"
+                                  >
+                                    <button class="btn btnVerMas" onclick="verDetalleCancion('${cancion.id}')">Ver más</button>
+                                    <button class="btn btnEditar" onclick="editarCancion('${cancion.id}')">Editar</button>
+                                    <button class="btn btnEliminar" onclick="eliminarCancion('${cancion.id}')">Eliminar</button>
+                                  </td>
+                                </tr>`;
+  };
 const cargarFilas = () => {
   tablaCancion.innerHTML = ``
   canciones.length > 0
