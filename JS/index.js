@@ -137,3 +137,4 @@ const verCancion = idTarjeta => {
   idTarjeta = idTarjeta.trim();
   window.location.href =
     window.location.origin + `/PAGES/detalleCancion.html?id=${idTarjeta}`;
+}
