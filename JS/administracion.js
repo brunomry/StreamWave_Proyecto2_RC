@@ -1,24 +1,8 @@
 import db from "../JS/db.js";
 import { Cancion } from "./claseCancion.js";
-import {regEx, validarAnio, validarArtista, validarCategoria, validarDuracion, validarTitulo, validarUrlCancion, validarUrlImagen} from "./validaciones.js"
+import {validarAnio, validarArtista, validarDuracion, validarTitulo, validarUrlCancion, validarUrlImagen} from "./validaciones.js"
 
 const canciones = JSON.parse(localStorage.getItem("cancionesKey")) || [];
-
-// const cargarDB = () => {
-//    localStorage.setItem("cancionesKey", JSON.stringify(db.canciones));
-//    localStorage.setItem("categorias", JSON.stringify(db.categorias));
-//    localStorage.setItem("usuarios", JSON.stringify(db.usuarios));
-//    location.reload();
-//  };
-
-// const btnCargarDB = document.querySelector(`#btnCargarDB`)
-// btnCargarDB.addEventListener("click", cargarDB)
-//   localStorage.setItem("cancionesKey", JSON.stringify(db.canciones));
-//   localStorage.setItem("categorias", JSON.stringify(db.categoria));
-//   localStorage.setItem("usuarios", JSON.stringify(db.usuarios));
-// };
-
-// cargarDB();
 
 const formularioCanciones = document.querySelector("form");
 
@@ -122,16 +106,9 @@ const editarPropiedadesCancion = (e) => {
 const crearCancion = (e) => {
   e.preventDefault();
 
-  if (
-    validarTitulo(titulo.value) &&
-    validarAnio(anio.value) &&
-    validarArtista(artista.value) &&
-    validarCategoria(categoria.value) &&
-    validarDuracion(duracion.value) &&
-    validarTitulo(titulo.value) &&
-    validarUrlCancion(cancion.value) &&
-    validarUrlImagen(imagen.value)
-  ) {
+  if(
+    validarTitulo(titulo.value) && validarAnio(anio.value) && validarArtista(artista.value) && validarDuracion(duracion.value) && validarUrlCancion(cancion.value) && validarUrlImagen(imagen.value)
+  ){ 
     const cancionNueva = new Cancion(
       crypto.randomUUID(),
       categoria.value,
@@ -143,25 +120,51 @@ const crearCancion = (e) => {
       cancion.value
     );
 
-    const cancionEncontrada = buscarCancion(cancionNueva);
-
-    if (cancionEncontrada) {
-      Swal.fire("La canción que deseas agregar ya existe!");
-    } else {
+    if(buscarCancion(cancionNueva) === false) {
+      console.log("la cancion no existe")
       canciones.push(cancionNueva);
-      agregarFila(cancionNueva, canciones.length);
-      guardarEnLocalstorage();
-      limpiarFormulario();
-      Swal.fire({
-        position: "top-center",
-        icon: "success",
-        title: "La canción fue registrada con éxito",
-        showConfirmButton: false,
-        timer: 1500,
-      });
+        agregarFila(cancionNueva,canciones.length);
+        guardarEnLocalstorage();
+        limpiarFormulario();
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "La canción fue registrada con éxito",
+          showConfirmButton: false,
+          timer: 1500
+        });
     }
+    else {
+      Swal.fire("La canción que deseas agregar ya existe!");
+    }
+  }else{
+    Swal.fire({
+      icon: "error",
+      title: "Datos erróneos",
+      text: "Uno o más datos ingresados no son válidos. Por favor, vuelve a ingresar nuevamente",
+    });
   }
 };
+
+const buscarCancion = cancion => {
+  let {titulo, artista} = cancion;
+  titulo = titulo.toLowerCase();
+  artista = artista.toLowerCase();
+
+  let cancionBuscada = false;
+
+  canciones.map(unaCancion => {
+    let {titulo: unTitulo, artista: unArtista} = unaCancion;
+    unTitulo = unTitulo.toLowerCase();
+    unArtista = unArtista.toLowerCase();
+
+    if(titulo === unTitulo && artista === unArtista) {
+      cancionBuscada = true;
+    }
+  })
+
+  return cancionBuscada;
+}
 
 const limpiarFormulario = () => formularioCanciones.reset();
 
