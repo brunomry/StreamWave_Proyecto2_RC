@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbarIndexHorizontal{
+    background-color: #101527;
+}
+.offCanvasNavbarIndex{
+    background-color: #101527;
+}
+.iconoNavbarIndexMD{
+    font-size: 20px;
+}
+
+header{
+  border-right: 1px solid #7df2ff; 
+}
+
+.btnMenuLateralLG{
+    border: 2px solid #101527 ;
+}
+.btnMenuLateralIniciarSesion{
+    background-color: #3ab9f0;
+}
+.btnMenuLateralIniciarSesion:hover{
+    cursor: pointer;
+    background-color: #2FA4D8;
+}
+
+.btnMenuLateralRegistrarse{
+    background-color: #5b993e;
+}
+.btnMenuLateralRegistrarse:hover{
+    background-color: #548b3a;
+}
+
+.iconosMenuLateral{
+    font-size: 30px;
+}
+.separadorHamburguesa{
+    color: #7df2ff;
+}
+.logoNavPequeño{
+    width: 160px;
+}
+.logoNavGrande{
+    width: 180px;
+}
+
+@media all and (min-width: 768px){
+    .menuLateral{
+        background-color: #101527;
+        font-size: 17.5px;
+    }
+
+    .menuLateral{
+        width: 200px;
+    }
+    .logoNavGrande{
+        width: 180px;
+    }
+}
+
+@media all and (min-width: 992px){
+  .menuLateral{
+      height: inherit;
+  }
+  .logoNavGrande{
+      width: 200px;
+  }
+}
+
+@media all and (min-width: 1200px){
+  header{
+    width: 300px;
+    border-right: 1px solid #7df2ff;
+  }
+
+  .menuLateral{
+    width: 100%;
+    height: inherit;
+  }
+
+  .menuLateral{
+      height: inherit;
+  }
+
+  .logoNavGrande{
+      width: 200px;
+  }
+}
+
+@media all and (min-width: 1400px){¿
+  .menuLateral{
+      width: 100%;
+      height: inherit;
+      border-right: 1px solid #7df2ff;
+      position: fixed;
+      top:0;
+  }
+
+  .logoNavGrande{
+      width: 250px;
+  }
+  .menuLateral{
+    background-color: #101527;
+    height: 100%;
+  }
+
+}
