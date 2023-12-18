@@ -13,6 +13,7 @@ const opcionesUsuarioNavHorizontal2 = document.getElementById(
 // const btnIniciarSesionBody = document.getElementById(`btnIniciarSesionBody`)
 
 // Funciones y eventos para verificar el rol del usuario ingresado
+let sesionActual = JSON.parse(localStorage.getItem(`usuarios`)) || [];
 
 function verificarRolUsuario() {
   if (sesionActual.length > 0) {
@@ -67,10 +68,10 @@ function verificarRolUsuario() {
 
 function cerrarSesion() {
   sesionActual.shift();
-  localStorage.removeItem(`sesionKey`);
+  localStorage.removeItem(`usuarios`);
   verificarRolUsuario();
   console.log("Sesion cerrada");
-  location.href = "../index.html";
+  window.location.href = window.location.origin + "/index.html";
 }
 
 verificarRolUsuario();

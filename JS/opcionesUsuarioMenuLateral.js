@@ -10,6 +10,7 @@ const opcionesUsuarioMenuLateral2 = document.getElementById(
   `opcionesUsuarioMenuLateral2`
 );
 // const btnIniciarSesionBody = document.getElementById(`btnIniciarSesionBody`);
+let sesionActual = JSON.parse(localStorage.getItem(`usuarios`)) || [];
 
 // Se declaran funciones y variables
 function verificarRolUsuario() {
@@ -23,7 +24,7 @@ function verificarRolUsuario() {
       opcionesConUsuarioMD.className = `nav-item dropdown text-center`;
       opcionesUsuarioMenuLateral1.innerHTML = `
         <li>
-          <a class="dropdown-item" href="administracion.html">Administración</a>
+          <a class="dropdown-item" href="./PAGES/administracion.html">Administración</a>
           </li>
           <li>
           <a class="dropdown-item" href="error404.html">Administrar cuenta</a>
@@ -33,7 +34,7 @@ function verificarRolUsuario() {
           </li>`;
       opcionesUsuarioMenuLateral2.innerHTML = `
       <li>
-          <a class="dropdown-item" href="administracion.html">Administrar</a>
+          <a class="dropdown-item" href="./PAGES/administracion.html">Administrar</a>
           </li>
           <li>
           <a class="dropdown-item" href="error404.html">Administrar cuenta</a>
@@ -75,10 +76,10 @@ function verificarRolUsuario() {
 
 function cerrarSesion() {
   sesionActual.shift();
-  localStorage.removeItem(`sesionKey`);
+  localStorage.removeItem(`usuarios`);
   verificarRolUsuario();
   console.log("Sesion cerrada");
-  location.href = "../index.html";
+  window.location.href = window.location.origin + "/index.html";
 }
 
 verificarRolUsuario();
