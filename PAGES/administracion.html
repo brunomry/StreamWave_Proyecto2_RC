@@ -25,13 +25,106 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../CSS/navbar.css">
     <link rel="stylesheet" href="../CSS/administracion.css" />
     <title>StreamWave</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <!-- navbar de resolucion MD o menor -->
+      <nav class="navbar navbar-dark fixed-top d-md-none navbarHorizontal">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"><img src="../IMG/logo_350_x_500.png" alt="Logo de Stream Wave" class="logoNavPequeño"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header offCanvasNavbar ">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="../IMG/logo_350_x_500.png" alt="Logo de Stream Wave" class="logoNavPequeño"> </h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offCanvasNavbar">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active text-center" aria-current="page" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="#">Acerca de nosotros</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="#">Iniciar sesión</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="#">Registrarse</a>
+                </li>
+                <!-- abajo estan las opciones de usuario que aparecerian una vez iniciada la sesion -->
+                <li class="nav-item dropdown d-none">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Cuenta
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Administrar cuenta</a></li>
+                    <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar de resolucion LG o mayor -->
+      <nav class=" navbar-dark navbar navbar-expand-md d-none d-md-block navbarHorizontal px-3 py-3">
+        <div class="container-fluid">
+          <div class="logo">
+            <a class="navbar-brand" href="../index.html"><img src="../IMG/logo_350_x_500.png" alt="Logo Stream Wave" class="logoNavGrande"></a>
+          </div>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active linksLG" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link linksLG" href="#">Acerca de nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link linksLG" href="#">Contacto</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <button class="btn"> <a class="nav-link linksLG" href="#">Iniciar sesión</a> </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn"> <a class="nav-link linksLG" href="#">Registrarse</a> </button>
+            </li>
+          </ul>
+          <!-- abajo está el icono de usuario que aparece una vez iniciada la sesion -->
+          <ul class="navbar-nav mb-2 mb-lg-0 botonDropdown d-none">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-user fa-xl"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Administrar cuenta</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <main>
-      <section class="container my-4">
+      <section class="container my-5">
         <div
           class="d-flex flex-column gap-3 align-items-center justify-content-between flex-lg-row"
         >
@@ -46,51 +139,25 @@
           >
             Nueva Canción
           </button>
+          <button class="btn btn-primary" id="btnCargarDB">Cargar Base de Datos</button>
         </div>
         <div class="table-responsive mt-4">
           <table
-            class="table table-bordered table-dark table-striped border border-1"
+            class="table table-bordered table-dark table-striped border border-1 text-center"
           >
-            <thead>
+            <thead class="text-center">
               <tr>
                 <th scope="col">Código</th>
                 <th scope="col">Título</th>
                 <th scope="col">Artista o Grupo</th>
-                <th scope="col" class="d-none d-lg-table-cell">Categoría</th>
-                <th scope="col" class="d-none d-lg-table-cell">Duración</th>
-                <th scope="col" class="text-center">Opciones</th>
+                <th scope="col">Categoría</th>
+                <th scope="col" class="d-none d-lg-table-cell">Duración (min)</th>
+                <th scope="col" class="d-none d-lg-table-cell">Año</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Opciones</th>
               </tr>
             </thead>
-            <tbody id="tablaCancion">
-              <tr>
-                <td>sd98123ad</td>
-                <td>Save your tears</td>
-                <td>The Weekend</td>
-                <td class="d-none d-lg-table-cell">Pop</td>
-                <td class="d-none d-lg-table-cell">04:26 min</td>
-                <td
-                  class="text-center text-dark d-flex flex-column flex-md-row align-items-center justify-content-center gap-1"
-                >
-                  <button class="btn btnVerMas mx-1 mb-1">Ver más</button>
-                  <button class="btn btnEditar mb-1">Editar</button>
-                  <button class="btn btnEliminar mx-1 mb-1">Eliminar</button>
-                </td>
-              </tr>
-              <tr>
-                <td>i82394ausd</td>
-                <td>Blinding Lights</td>
-                <td>The Weekend</td>
-                <td class="d-none d-lg-table-cell">Pop</td>
-                <td class="d-none d-lg-table-cell">03:32 min</td>
-                <td
-                  class="text-center text-dark d-flex flex-column flex-md-row align-items-center justify-content-center gap-1"
-                >
-                  <button class="btn btnVerMas mx-1 mb-1">Ver más</button>
-                  <button class="btn btnEditar mb-1">Editar</button>
-                  <button class="btn btnEliminar mx-1 mb-1">Eliminar</button>
-                </td>
-              </tr>
-            </tbody>
+            <tbody id="tablaCancion" class="align-middle"></tbody>
           </table>
         </div>
       </section>
@@ -158,14 +225,14 @@
                     <option value="seleccione" disabled selected>
                       Seleccione
                     </option>
-                    <option value="nuevos lanzamientos">
+                    <option value="Nuevos Lanzamientos">
                       Nuevos Lanzamientos
                     </option>
-                    <option value="lo más escuchado">Lo más escuchado</option>
-                    <option value="clásicos inolvidables">
+                    <option value="Lo más escuchado">Lo más escuchado</option>
+                    <option value="Clásicos inolvidables">
                       Clásicos inolvidables
                     </option>
-                    <option value="rock nacional">Rock nacional</option>
+                    <option value="Rock Nacional">Rock nacional</option>
                   </select>
                 </div>
               </div>
@@ -213,7 +280,8 @@
               </div>
               <div class="col-md-5 text-md-center mx-auto">
                 <label for="duracion" class="form-label">Duración:</label>
-                <input
+                <div class="mb-4 input-group">
+                  <input
                   type="text"
                   id="duracion"
                   class="form-control pe-0"
@@ -222,18 +290,167 @@
                   minlength="5"
                   maxlength="5"
                   required
-                />
-                <span class="input-group-text">min</span>
+                  />
+                  <span class="input-group-text">min</span>
+                </div>
+              </div>
+              <div
+                class="mb-3 d-flex flex-column flex-sm-row px-5 justify-content-center gap-2"
+              >
+                <button class="btn btn-primary px-5" type="submit">
+                  Agregar
+                </button>
+                <button class="btn btn-secondary px-5" type="button">
+                  Cancelar
+                </button>
               </div>
             </form>
           </div>
-          <div
-            class="mb-3 d-flex flex-column flex-sm-row px-5 justify-content-center gap-2"
-          >
-            <button class="btn btn-primary px-5" type="submit">Agregar</button>
-            <button class="btn btn-secondary px-5" type="button">
-              Cancelar
-            </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal"
+      id="modalEditarCancion"
+      tabindex="-1"
+      aria-labelledby="modalEditarCancionLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog bg-white rounded-3">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Editar Cancion</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Elige los campos que deseas y modifica la informacion que se mostrará en pantalla
+            </p>
+            <form class="row" id="formModalEditar">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="tituloCancion" class="form-label"
+                    >Título de Canción:</label
+                  >
+                  <input
+                    type="text"
+                    id="tituloCancionEditar"
+                    class="form-control"
+                    placeholder="Título de canción"
+                    minlength="1"
+                    maxlength="40"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="artistaGrupo" class="form-label"
+                    >Artista o Grupo:</label
+                  >
+                  <input
+                    type="text"
+                    id="artistaGrupoEditar"
+                    class="form-control"
+                    placeholder="Artista o grupo"
+                    minlength="1"
+                    maxlength="40"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="categoria" class="form-label">Categoría</label>
+                  <select id="categoriaEditar" class="form-select" required>
+                    <option value="seleccione" disabled selected>
+                      Seleccione
+                    </option>
+                    <option value="Nuevos Lanzamientos">
+                      Nuevos Lanzamientos
+                    </option>
+                    <option value="Lo más escuchado">Lo más escuchado</option>
+                    <option value="Clásicos inolvidables">
+                      Clásicos inolvidables
+                    </option>
+                    <option value="Rock Nacional">Rock nacional</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="anioLanzamiento" class="form-label"
+                    >Año de lanzamiento:</label
+                  >
+                  <input
+                    type="text"
+                    id="anioLanzamientoEditar"
+                    class="form-control"
+                    placeholder="Ej: 2012"
+                    minlength="4"
+                    maxlength="4"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="imagenPortada" class="form-label"
+                    >Imagen de portada:</label
+                  >
+                  <input
+                    type="url"
+                    id="imagenPortadaEditar"
+                    class="form-control"
+                    placeholder="URL de imagen"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="cancion" class="form-label">Canción:</label>
+                  <input
+                    type="url"
+                    id="cancionEditar"
+                    class="form-control"
+                    placeholder="URL de la canción"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-5 text-md-center mx-auto">
+                <label for="duracion" class="form-label">Duración:</label>
+                <div class="mb-4 input-group">
+                  <input
+                  type="text"
+                  id="duracionEditar"
+                  class="form-control pe-0"
+                  pattern="[0-5][0-9]:[0-5][0-9]"
+                  placeholder="Ej: 03:20"
+                  minlength="5"
+                  maxlength="5"
+                  required
+                  />
+                  <span class="input-group-text">min</span>
+                </div>
+              </div>
+              <div
+                class="mb-3 d-flex flex-column flex-sm-row px-5 justify-content-center gap-2"
+              >
+                <button class="btn btn-primary px-5" type="submit">
+                  Aceptar Cambios
+                </button>
+                <button class="btn btn-secondary px-5" type="button" data-bs-dismiss="modal" aria-label="Close">
+                  Cancelar
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -244,5 +461,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JS/administracion.js" type="module"></script>
   </body>
 </html>
