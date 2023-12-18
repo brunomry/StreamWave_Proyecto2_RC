@@ -4,6 +4,66 @@ const db = {
   usuarios: [],
   canciones: [
     new Cancion(
+      "7345064a-1b8f-4125-a52c-a87340a63280",
+      "Nuevos Lanzamientos",
+      "GTA.mp3",
+      "Emilia",
+      "2023",
+      "02:00",
+      "https://lh3.googleusercontent.com/uJKHESh8VPqACp6r-Hde7aGGGslaJLN9nsQ-fk22VlPZBvOTjGIfaDUhaObdWFzqZtLwBM10OYW-rpPb",
+      "https://www.youtube.com/embed/k-RoPmzJ0sw?si=jOoBFiJ77Ir-fHxa"
+  ),
+  new Cancion(
+      "dce93a7b-2877-4bef-bcd5-9e16adcad91f",
+      "Nuevos Lanzamientos",
+      "Salir con vida",
+      "Morat",
+      "2023",
+      "02:45",
+      "https://lh3.googleusercontent.com/bfsA6Og94QDTP9y7R3NZJQIHvfDxq5EB40IB2_L8bO6SZY891friw5xLg2dat-KJErAIP3t31g-MUVI",
+      "https://www.youtube.com/embed/HGcABHAFvRA?si=4-MZgfVzOhCQwz0w"
+  ),
+  new Cancion(
+      "1b740332-98ed-4ad0-bf80-1282d2f99b1e",
+      "Nuevos Lanzamientos",
+      "NO voy a llorar",
+      "Nicki Nicole",
+      "2023",
+      "02:40",
+      "https://lh3.googleusercontent.com/M1kCM2Bz29JcqgCRzNlQe7QHmS23dLP9kuR9W3Ue9U21dxlOt41vpgfVA3Ja98dWDJu--wCMev6AOWbhHw",
+      "https://www.youtube.com/embed/I-PbBrFddr0?si=jbaeVer1mhfWYq_s"
+  ),
+  new Cancion(
+      "dd00c31d-7c27-4f97-b923-2221bef122e0",
+      "Nuevos Lanzamientos",
+      "Carencias de cordura",
+      "Milo J",
+      "2023",
+      "03:09",
+      "https://lh3.googleusercontent.com/vTy5QIFJakWSBy_TsEjVv6Z2216UcWJA6q4yOAnLrdc6fWmS4rhcovbqjSa_K5EiY8dd-YAlxnOtZgw3",
+      "https://www.youtube.com/embed/-zxlKAR5e2w?si=SrhGr3qe2hWCBoUr"
+  ),  
+  new Cancion(
+      "dfe392ee-e814-4ab6-81ad-17f737e05ede",
+      "Nuevos Lanzamientos",
+      "Provenza",
+      "Karol G",
+      "2023",
+      "02:41",
+      "https://lh3.googleusercontent.com/pgekGa1pMHRwSGGCtfhrGyw2KGIhHx-SS5cEjQa5hm53ifUGWEJ4Af2yqzM5OIlmie3YjOslempXBeOp",
+      "https://www.youtube.com/embed/VBcs8DZxBGc?si=G0s3G_NPIF2yBtLw"
+  ),
+  new Cancion(
+      "806f8ec4-b80e-4382-a513-9878ecd26468",
+      "Nuevos Lanzamientos",
+      "Ojitos lindos",
+      "Bad Bunny",
+      "2023",
+      "07:19",
+      "https://lh3.googleusercontent.com/wLNbSrba-Qu4IFD4zLkjmxn2IqtDN1tQEWSh_QgrlBTy1GhDLai3JGjEmQ9K-6sWttkzQFBrmO2Mj4_1iw",
+      "https://www.youtube.com/embed/_PJvpq8uOZM?si=BDj95ccXIL46oOrt"
+  ),
+    new Cancion(
       "ca1631d9-11d2-43b3-a956-09d5039f3d29",
       "Lo más escuchado",
       "Blinding Lights",

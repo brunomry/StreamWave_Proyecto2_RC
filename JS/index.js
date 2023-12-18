@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const seccionBusqueda = document.createElement("section");
     seccionBusqueda.id = 'seccionBusqueda';
-    seccionBusqueda.classList.add("d-flex", "flex-wrap", "gap-2", "contenedorCanciones","pt-5");
+    seccionBusqueda.classList.add("d-flex", "flex-wrap", "gap-2", "contenedorCanciones","py-5", "mb-5");
 
     canciones.forEach((cancion) => {
       const titulo = cancion.titulo.toUpperCase();

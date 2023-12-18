@@ -26,12 +26,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/iniciarSesion.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/administracion.css" />
     <title>Administracion | StreamWave</title>
   </head>
   <body>
     <header>
-      <!-- navbar de resolucion MD o menor -->
       <nav class="navbar navbar-dark fixed-top d-md-none navbarHorizontal">
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html"><img src="../IMG/logo_350_x_500.png" alt="Logo de Stream Wave" class="logoNavPequeño"></a>
@@ -49,18 +50,18 @@
                   <a class="nav-link active text-center" aria-current="page" href="../index.html">Inicio</a>
                 </li>
                 <li class="nav-item text-center">
-                  <a class="nav-link" href="#">Acerca de nosotros</a>
+                  <a class="nav-link" href="nosotros.html">Acerca de nosotros</a>
                 </li>
                 <li class="nav-item text-center">
-                  <a class="nav-link" href="#">Contacto</a>
+                  <a class="nav-link" href="error404.html">Contacto</a>
                 </li>
                 <li class="nav-item text-center">
-                  <a class="nav-link" href="#">Iniciar sesión</a>
+                  <a class="nav-link" href="#" data-bs-toggle="modal"
+                  data-bs-target="#modalIniciarSesion">Iniciar sesión</a>
                 </li>
                 <li class="nav-item text-center">
-                  <a class="nav-link" href="#">Registrarse</a>
+                  <a class="nav-link" href="error404.html">Registrarse</a>
                 </li>
-                <!-- abajo estan las opciones de usuario que aparecerian una vez iniciada la sesion -->
                 <li class="nav-item dropdown d-none">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Cuenta
@@ -75,7 +76,6 @@
           </div>
         </div>
       </nav>
-      <!-- navbar de resolucion LG o mayor -->
       <nav class=" navbar-dark navbar navbar-expand-md d-none d-md-block navbarHorizontal px-3 py-3">
         <div class="container-fluid">
           <div class="logo">
@@ -86,21 +86,21 @@
               <a class="nav-link active linksLG" aria-current="page" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linksLG" href="#">Acerca de nosotros</a>
+              <a class="nav-link linksLG" href="nosotros.html">Acerca de nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linksLG" href="#">Contacto</a>
+              <a class="nav-link linksLG" href="error404.html">Contacto</a>
             </li>
           </ul>
-          <ul class="navbar-nav mb-2 mb-lg-0">
+          <ul class="navbar-nav mb-2 mb-lg-0 d-none">
             <li class="nav-item">
-              <button class="btn"> <a class="nav-link linksLG" href="#">Iniciar sesión</a> </button>
+              <a class="nav-link linksLG" href="#" data-bs-toggle="modal"
+                data-bs-target="#modalIniciarSesion">Iniciar sesión</a>
             </li>
             <li class="nav-item">
-              <button class="btn"> <a class="nav-link linksLG" href="#">Registrarse</a> </button>
+              <a class="nav-link linksLG" href="error404.html">Registrarse</a>
             </li>
           </ul>
-          <!-- abajo está el icono de usuario que aparece una vez iniciada la sesion -->
           <ul class="navbar-nav mb-2 mb-lg-0 botonDropdown d-none">
             <li class="nav-item dropdown">
               <a
@@ -111,10 +111,9 @@
                 aria-expanded="false"
               >
                 <i class="fa-regular fa-user fa-xl"></i>
-              </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="#">Administrar cuenta</a>
+                  <a class="dropdown-item" href="error404.html">Administrar cuenta</a>
                 </li>
                 <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
               </ul>
@@ -162,6 +161,71 @@
         </div>
       </section>
     </main>
+    <footer class="text-light py-3">
+      <section class="container h-100">
+        <div class="row">
+          <div class="col-lg-3 text-center">
+            <img
+              src="../IMG/logo_350_x_500.png"
+              alt="logo StreamWave"
+              class="imgFooter"
+            />
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 text-center pt-4">
+            <h4>Empresa</h4>
+            <ul class="list-unstyled list-inline">
+              <li>
+                <a
+                  href="nosotros.html"
+                  class="link-light link-underline-opacity-0 link-underline-opacity-25-hover text-secondary"
+                  >Acerca de Nosotros</a
+                >
+              </li>
+              <li>
+                <a
+                  href="error404.html"
+                  class="link-light link-underline-opacity-0 link-underline-opacity-25-hover text-secondary"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 text-center pt-4">
+            <h4>Cuenta</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  class="link-light link-underline-opacity-0 link-underline-opacity-25-hover text-secondary"
+                  >Iniciar sesión</a
+                >
+              </li>
+              <li>
+                <a
+                  href="error404.html"
+                  class="link-light link-underline-opacity-0 link-underline-opacity-25-hover text-secondary"
+                  >Registrarse</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-lg-3 text-center pt-4 iconosFooter">
+            <h4 class="mb-3">Síguenos</h4>
+            <div class="d-flex justify-content-center gap-3">
+            <a href="error404.html" class="link-light"
+              ><i class="fa-brands fa-facebook fs-2"></i></a>
+            <a href="error404.html" class="link-light"
+              ><i class="fa-brands fa-twitter fs-2"></i></a>
+            <a href="error404.html" class="link-light"
+              ><i class="fa-brands fa-instagram fs-2"></i
+            ></a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <p class="text-light">&copy; Todos los derechos reservados. 2023.</p>
+        </div>
+      </section>
+    </footer>
     <div
       class="modal"
       id="modalCancion"
@@ -455,7 +519,106 @@
         </div>
       </div>
     </div>
-    <footer></footer>
+    <div
+    class="modal fade text-light border-2"
+    id="modalIniciarSesion"
+    tabindex="-1"
+    aria-labelledby="modalIniciarSesion"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog ">
+      <div class="modal-content modalIniciarSesion ">
+        <div
+          class="modal-header d-flex justify-content-between contenedorLogo"
+        >
+          <a href="index.html
+          "><img
+          class="imagenLogo"
+          src="./IMG/logo_350_x_500.png"
+          alt="logo"
+          width="225"
+          height="125"
+        /></a>
+        <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h2 class="text-center mb-4 fw-bold">
+            Iniciar sesión en Stream Wave
+          </h2>
+          <a
+            href="error404.html"
+            class="btn btn-danger d-flex align-items-center justify-content-center gap-3 mb-3 mx-sm-3 py-2 rounded-4"
+            ><i class="fa-brands fa-google fs-4 d-none d-md-block"></i
+            ><span class="text-center fw-bold"
+              >Continuar con Google</span
+            ></a
+          >
+          <a
+            href="error404.html"
+            class="btn btn-primary d-flex align-items-center justify-content-center gap-3 mx-sm-3 py-2 rounded-4"
+            ><i class="fa-brands fa-facebook-f fs-4 d-none d-md-block"></i
+            ><span class="text-center fw-bold"
+              >Continuar con Facebook</span
+            ></a
+          >
+        </div>
+        <hr class="mx-4" />
+        <p class="text-center mb-3 fw-bold fs-5">
+          Ingresá tu correo y contraseña
+        </p>
+        <form class="mx-2" id="formularioDeIngreso">
+          <div class="form-floating mb-3 mx-2 mx-sm-4 text-dark">
+            <input
+              type="email"
+              class="form-control rounded-4"
+              id="correo"
+              placeholder="usuario@ejemplo.com"
+              minlength="4"
+              maxlength="265"
+              required
+            />
+            <label for="floatingInput">Correo electrónico</label>
+          </div>
+          <div class="form-floating mx-2 mx-sm-4 text-dark">
+            <input
+              type="password"
+              class="form-control rounded-4"
+              id="clave"
+              minlength="8"
+              placeholder="Contraseña"
+              required
+            />
+            <label for="floatingPassword text-dark">Contraseña</label>
+          </div>
+          <div class="me-4 py-3 text-end">
+            <input type="checkbox" id="recuerdame" />
+            <label class="textoBlanco" for="recuerdame">Recuérdame</label>
+          </div>
+          <div class="mb-4 d-flex">
+            <button
+              type="submit"
+              class="btn btnIniciarSesion mx-2 mx-sm-4 fw-bold text-white rounded-4"
+            >
+              Iniciar sesión
+            </button>
+          </div>
+        </form>
+        <div class="text-center d-flex flex-column gap-4">
+          <a class="recuperarContrasenia" href="error404.html"
+            >¿Olvidaste tu contraseña?</a
+          >
+          <span class="mb-3"
+            >¿No tienes cuenta?
+            <a class="registrate" href="error404.html">Regístrate</a></span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+    <script
+    src="https://kit.fontawesome.com/d74da69b43.js"
+    crossorigin="anonymous"
+  ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
