@@ -14,6 +14,16 @@ const imagen = document.querySelector("#imagenPortada");
 const cancion = document.querySelector("#cancion");
 const duracion = document.querySelector("#duracion");
 
+const btnCancelar = document.getElementById("btnCancelar");
+const btnCancelarUpdate = document.getElementById("btnCancelarUpdate");
+const modalCancion = document.getElementById("modalCancion");
+
+btnCancelar.addEventListener("click", () => {
+  if(modalCancion.show()){
+    modalCancion.style.display = 'none';
+  }
+});
+
 const modalEditarCancion = new bootstrap.Modal(
   document.getElementById("modalEditarCancion")
 );
