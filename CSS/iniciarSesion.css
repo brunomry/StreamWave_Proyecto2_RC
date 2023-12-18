@@ -1,20 +1,27 @@
 .btnIniciarSesion{
-  width: 100%;
-  background-color: #3ab9f0;
-  padding: 10px;
-  font-size: 18px;
+    width: 100%;
+    background-color: #3ab9f0;
+    padding: 10px;
+    font-size: 18px;
+}
+  
+.btnIniciarSesion:hover{
+    background-color: #2FA4D8;
 }
 
-.btnIniciarSesion:hover{
-  background-color: #2FA4D8;
+.modalIniciarSesion{
+  background: #101527;
+  border: 1px solid #3ab9f0;
 }
 
 .recuperarContrasenia,
 .registrate{
-    text-decoration: none;
+  text-decoration: none;
+ 
 }
-
+  
 .recuperarContrasenia:hover,
 .registrate:hover{
-    text-decoration: underline;
+  text-decoration: underline;
+  color: #2FA4D8;
 }
