@@ -1,19 +1,8 @@
 import db from "../JS/db.js";
 import { Cancion } from "./claseCancion.js";
+import {validarAnio, validarArtista, validarDuracion, validarTitulo, validarUrlCancion, validarUrlImagen} from "./validaciones.js"
 
 const canciones = JSON.parse(localStorage.getItem("cancionesKey")) || [];
-
-const cargarDB = () => {
-   localStorage.setItem("cancionesKey", JSON.stringify(db.canciones));
-   localStorage.setItem("categorias", JSON.stringify(db.categorias));
-   localStorage.setItem("usuarios", JSON.stringify(db.usuarios));
-   location.reload()
- };
-
-const btnCargarDB = document.querySelector(`#btnCargarDB`)
-btnCargarDB.addEventListener("click", cargarDB)
-
-cargarDB();
 
 const formularioCanciones = document.querySelector("form");
 
@@ -102,7 +91,6 @@ const editarPropiedadesCancion = (e) => {
         document.querySelector("#duracionEditar").value;
       guardarEnLocalstorage();
       cargarFilas();
-      console.log("se guardaron los cambios en local storage")
       Swal.fire("Cambios guardados correctamente", "", "success");
 
       modalEditarCancion.hide();
@@ -117,21 +105,66 @@ const editarPropiedadesCancion = (e) => {
 
 const crearCancion = (e) => {
   e.preventDefault();
-  const cancionNueva = new Cancion(
-    crypto.randomUUID(),
-    categoria.value,
-    titulo.value,
-    artista.value,
-    anio.value,
-    duracion.value,
-    imagen.value,
-    cancion.value
-  );
-  canciones.push(cancionNueva);
-  agregarFila(cancionNueva, canciones.length);
-  guardarEnLocalstorage();
-  limpiarFormulario();
+
+  if(
+    validarTitulo(titulo.value) && validarAnio(anio.value) && validarArtista(artista.value) && validarDuracion(duracion.value) && validarUrlCancion(cancion.value) && validarUrlImagen(imagen.value)
+  ){ 
+    const cancionNueva = new Cancion(
+      crypto.randomUUID(),
+      categoria.value,
+      titulo.value,
+      artista.value,
+      anio.value,
+      duracion.value,
+      imagen.value,
+      cancion.value
+    );
+
+    if(buscarCancion(cancionNueva) === false) {
+      console.log("la cancion no existe")
+      canciones.push(cancionNueva);
+        agregarFila(cancionNueva,canciones.length);
+        guardarEnLocalstorage();
+        limpiarFormulario();
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "La canción fue registrada con éxito",
+          showConfirmButton: false,
+          timer: 1500
+        });
+    }
+    else {
+      Swal.fire("La canción que deseas agregar ya existe!");
+    }
+  }else{
+    Swal.fire({
+      icon: "error",
+      title: "Datos erróneos",
+      text: "Uno o más datos ingresados no son válidos. Por favor, vuelve a ingresar nuevamente",
+    });
+  }
 };
+
+const buscarCancion = cancion => {
+  let {titulo, artista} = cancion;
+  titulo = titulo.toLowerCase();
+  artista = artista.toLowerCase();
+
+  let cancionBuscada = false;
+
+  canciones.map(unaCancion => {
+    let {titulo: unTitulo, artista: unArtista} = unaCancion;
+    unTitulo = unTitulo.toLowerCase();
+    unArtista = unArtista.toLowerCase();
+
+    if(titulo === unTitulo && artista === unArtista) {
+      cancionBuscada = true;
+    }
+  })
+
+  return cancionBuscada;
+}
 
 const limpiarFormulario = () => formularioCanciones.reset();
 
@@ -170,15 +203,11 @@ window.eliminarCancion = (idCancion) => {
       const posicionCancionBuscada = canciones.findIndex(
         (cancion) => cancion.id === idCancion
       );
-      console.log(posicionCancionBuscada);
-
       canciones.splice(posicionCancionBuscada, 1);
       guardarEnLocalstorage();
 
       const tablaCancion = document.querySelector("tbody");
-      console.log(tablaCancion.children[posicionCancionBuscada]);
       tablaCancion.removeChild(tablaCancion.children[posicionCancionBuscada]);
-
       Swal.fire({
         title: "Canción eliminada con éxito",
         text: "La canción seleccionada fué eliminada con éxito",
@@ -189,7 +218,6 @@ window.eliminarCancion = (idCancion) => {
 };
 
 window.verDetalleCancion = id => {
-  console.log(window.location);
   window.location.href =
     window.location.origin + "/PAGES/verMasDetalleCancion.html?id=" + id;
 };
@@ -198,3 +226,4 @@ formularioCanciones.addEventListener("submit", crearCancion);
 cargarFilas();
 
 formModalEditar.addEventListener("submit", editarPropiedadesCancion);
+
