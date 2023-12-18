@@ -1,5 +1,22 @@
+import db from "../JS/db.js";
 
 const canciones = JSON.parse(localStorage.getItem("cancionesKey")) || []
+
+const estadoDB = false;
+
+const cargarDB = () =>{
+  localStorage.setItem("cancionesKey", JSON.stringify(db.canciones))
+  localStorage.setItem("categorias", JSON.stringify(db.categorias))
+  localStorage.setItem("usuarios", JSON.stringify(db.usuarios))
+}
+
+function recargarLocalStorage() {
+  if (canciones.length < 1 && estadoDB === false) {
+    cargarDB();
+    estadoDB = true;
+  } else if (canciones.length > 1 && estadoDB === true) estadoDB = false;
+}
+recargarLocalStorage();
 
 const crearTarjetaCancion = (cancion) => {
   const tarjetaHTML = `
@@ -116,23 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
 const verCancion = idTarjeta => {
   idTarjeta = idTarjeta.trim();
   window.location.href =
     window.location.origin + `/PAGES/detalleCancion.html?id=${idTarjeta}`;
-
-//     const idTarjeta = window.location.search;
-// const array = Array.from(idTarjeta)
-
-// const idCancion = array.splice(4, array.length).join("");
-
-// const canciones = JSON.parse(localStorage.getItem("cancionesKey")) || []
-
-// const cancionEncontrada = canciones.find(cancion =>  cancion.id === idTarjeta)
-// console.log(cancionEncontrada)
-};
-
-
-
-
