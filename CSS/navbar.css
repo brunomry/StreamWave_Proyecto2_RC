@@ -11,7 +11,7 @@
 
 .linksLG{
     border-bottom: 3px solid #101527;
-    font-size: 17.5px;
+    font-size: 16px;
 }
 
 .linksLG:hover{
@@ -19,7 +19,7 @@
 }
 
 .logo{
-    margin-left: 100px;
+    margin-left: 0px;
 }
 
 .botonDropdown{
@@ -39,7 +39,7 @@
 }
 
 .logoNavGrande{
-    width: 180px;
+    width: 100px;
 }
 
 @media all and (min-width: 768px){
@@ -47,8 +47,31 @@
         margin-left: 0;
     }
 
+    .linksLG{
+        border-bottom: 3px solid #101527;
+        font-size: 17.5px;
+        text-align: center;
+    }
+
     .logoNavGrande{
-        width: 250px;
+        width: 200px;
+        padding-left: 0;
+    }
+}
+
+@media all and (min-width: 992px){
+    .logo{
+        margin-left: 0;
+    }
+
+    .linksLG{
+        border-bottom: 3px solid #101527;
+        font-size: 17.5px;
+        text-align: center;
+    }
+
+    .logoNavGrande{
+        width: 300px;
         padding-left: 0;
     }
 }
