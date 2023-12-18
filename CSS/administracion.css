@@ -1,0 +1,40 @@
+*{
+   font-family: 'Poppins', sans-serif;
+ }
+  
+ body{
+   background: #101527;
+ }
+
+.btnVerMas{
+   width: 100%;
+   background-color: #85B8FF;
+   padding: 5px 0;
+}
+
+.btnVerMas:hover{
+    background-color: #579DFF;
+ }
+  
+ .btnEditar{
+   width: 100%;
+   background-color: #F5CD47;
+ }
+  
+ .btnEditar:hover{
+   background-color: #F9B635;
+ }
+  
+ .btnEliminar{
+   width: 100%;
+   background-color: #e65168;
+ }
+  
+ .btnEliminar:hover{
+   background-color: #cf475c;
+ }
+  
+ .imgCancion{
+   width: 100px;
+   height: 100px;
+ }
