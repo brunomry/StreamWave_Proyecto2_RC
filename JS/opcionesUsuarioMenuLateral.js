@@ -1,4 +1,3 @@
-// Se declaran selectores
 const opcionesSinUsuarioLG = document.getElementById(`opcionesSinUsuarioLG`);
 const opcionesConUsuarioLG = document.getElementById(`opcionesConUsuarioLG`);
 const opcionesSinUsuarioMD = document.getElementById(`opcionesSinUsuarioMD`);
@@ -9,11 +8,10 @@ const opcionesUsuarioMenuLateral1 = document.getElementById(
 const opcionesUsuarioMenuLateral2 = document.getElementById(
   `opcionesUsuarioMenuLateral2`
 );
-// const btnIniciarSesionBody = document.getElementById(`btnIniciarSesionBody`);
+
 let sesionActual = JSON.parse(localStorage.getItem(`usuarios`)) || [];
 
-// Se declaran funciones y variables
-function verificarRolUsuario() {
+export function verificarRolUsuario() {
   if (sesionActual.length > 0) {
     let usuarioEncontrado = sesionActual[0];
     if (usuarioEncontrado.rol_ === "administrador") {
@@ -42,7 +40,6 @@ function verificarRolUsuario() {
           <li>
               <a class="dropdown-item" onClick="cerrarSesion()">Cerrar sesión</a>
           </li>`;
-          // btnIniciarSesionBody.hidden = true
     } else if (usuarioEncontrado.rol_ === "usuario") {
       console.log("El usuario ingresado no tiene permisos de administrador");
       opcionesSinUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 d-flex flex-column d-none`;
@@ -64,13 +61,11 @@ function verificarRolUsuario() {
           <li>
               <a class="dropdown-item" onClick="cerrarSesion()">Cerrar sesión</a>
           </li>`;
-          // btnIniciarSesionBody.hidden = true
     }
   } else {
     console.log("No has iniciado sesion");
     opcionesSinUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 d-flex flex-column`;
     opcionesConUsuarioLG.className = `navbar-nav mb-2 mb-lg-0 botonDropdown d-none`;
-    // btnIniciarSesionBody.hidden = false
   }
 }
 
@@ -78,7 +73,6 @@ function cerrarSesion() {
   sesionActual.shift();
   localStorage.removeItem(`usuarios`);
   verificarRolUsuario();
-  console.log("Sesion cerrada");
   window.location.href = window.location.origin + "/index.html";
 }
 
