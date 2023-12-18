@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Canción | StreamWave</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/menuLateral.css" />
+    <link rel="stylesheet" href="../CSS/footer.css" />
+    <link rel="stylesheet" href="../CSS/iniciarSesion.css">
+    <link rel="stylesheet" href="../CSS/detalleCancion.css" />      
+    <link rel="stylesheet" href="../CSS/index.css"> 
+  </head>
+  <body class="d-md-flex">
+      <header class="headerLateral header">
+        <nav
+          class="navbar navbar-dark fixed-top d-md-none navbarIndexHorizontal"
+        >
+          <div class="container">
+            <a class="navbar-brand" href="../index.html"
+              ><img
+                src="../IMG/logo_350_x_500.png"
+                alt="Logo de Stream Wave"
+                class="logoNavPequeño"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header offCanvasNavbarIndex">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                  <img
+                    src="../IMG/logo_350_x_500.png"
+                    alt="Logo de Stream Wave"
+                    class="logoNavPequeño"
+                  />
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body offCanvasNavbarIndex">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active text-center"
+                      aria-current="page"
+                      href="index.html"
+                      ><i class="bi bi-house-door iconoNavbarIndexMD"></i>
+                      Inicio</a
+                    >
+                  </li>
+                  <li class="nav-item text-center">
+                    <a class="nav-link" href="./PAGES/error404.html"
+                      ><i class="bi bi-music-note-list iconoNavbarIndexMD"></i>
+                      Tu biblioteca</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="separadorHamburguesa opacity-100" />
+                  </li>
+                  <li class="nav-item text-center">
+                    <a
+                      class="nav-link"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalIniciarSesion"
+                      >Iniciar sesión</a
+                    >
+                  </li>
+                  <li class="nav-item text-center">
+                    <a class="nav-link" href="error404.html"
+                      >Registrarse</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown d-none">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Cuenta
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#">Administrar cuenta</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Cerrar sesión</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <nav
+          class="navbar-dark navbar navbar-expand-md d-none d-md-block px-3 py-3 menuLateral text-center justify-content-center"
+        >
+          <div
+            class="container-fluid d-flex flex-column align-items-start px-0 mx-auto text-center justify-content-center"
+          >
+            <div class="logo mb-5 ms-2 d-flex justify-content-center w-100">
+              <a class="navbar-brand" href="../index.html"
+                ><img
+                  src="../IMG/logo_350_x_500.png"
+                  alt="Logo de Stream Wave"
+                  class="logoNavGrande"
+              /></a>
+            </div>
+            <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-column mx-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-start"
+                  aria-current="page"
+                  href="../index.html"
+                  ><i class="bi bi-house-door iconosMenuLateral"></i> Inicio</a
+                >
+              </li>
+              <li class="nav-item mb-5">
+                <a class="nav-link text-start" href="./PAGES/error404.html"
+                  ><i class="bi bi-music-note-list iconosMenuLateral"></i> Tu
+                  biblioteca</a
+                >
+              </li>
+            </ul>
+            <ul
+              class="navbar-nav mb-2 mb-lg-0 d-flex flex-column align-items-center gap-1"
+            >
+              <li class="nav-item mb-2 ms-1">
+                <a
+                  class="nav-link active btnMenuLateralLG btnMenuLateralIniciarSesion px-3 rounded-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalIniciarSesion"
+                  >Iniciar sesión</a
+                >
+              </li>
+              <li class="nav-item mb-2 ms-1 px-2">
+                <a
+                  class="nav-link active btnMenuLateralLG btnMenuLateralRegistrarse px-4 rounded-2"
+                  href="error404.html"
+                  >Registrarse</a
+                >
+              </li>
+              <li class="text-light mt-3">
+                <p>
+                  Accede a tu cuenta para crear y compartir playlists, obtener
+                  recomendaciones personalizadas y mucho mas.
+                </p>
+              </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0 botonDropdown d-none">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-regular fa-user fa-xl"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Administrar cuenta</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div class="d-flex flex-column principal ">
+        <main class=" h-100 mainDetalleCancion">
+          <div class="container me-md-2 me-lg-0 my-5 mx-md-5" id="contenedorCatalogo">
+            <div class="d-flex container justify-content-between me-5 w-100 ms-xxl-5 ps-xxl-5">
+              <form
+                class="d-flex formPrincipal "
+                role="search"
+                id="formPrincipal"
+              >
+                <input
+                  class="form-control rounded-2"
+                  type="search"
+                  placeholder="¿Qué deseas escuchar?"
+                  aria-label="Search"
+                  id="inputBusqueda"
+                />
+              </form>
+              <div class="me-lg-5 pe-lg-5 d-none d-lg-block">
+                <a href="./PAGES/iniciarSesion.html"
+                  class="btn btnIniciarSesion d-md-block px-3 text-white me-lg-0" data-bs-toggle="modal"
+                  data-bs-target="#modalIniciarSesion"
+                >
+                  Iniciar Sesión
+                </a>
+              </div>
+            </div>
+          </div>
+          <section
+            class="ps-2 pe-1 px-sm-5 w-100"
+          >
+            <div class="d-flex flex-column flex-xl-row justify-content-lg-center me-xxl-5 pe-xxl-5">
+              <div class="ratio ratio-16x9 text-start me-3 me-lg-5 mb-3" >
+                <iframe id="iFrameDinamico" src="" frameborder="0" allowfullscreen></iframe>`
+              </div>
+            <div class="text-start text-md-center text-lg-start my-auto ps-0 mt-3 mt-lg-0">
+              <ul class="list-unstyled text-center ">
+                <li class="mt-3 text-center text-xl-start mb-4"><h4 class="informacionCancion">Título de canción</h4></li>
+                <div class="d-sm-flex flex-row justify-content-center gap-3 flex-xl-column align-items-start">
+                  <li class=" mt-sm-3 mt-lg-0 text-xl-start informacionCancion">Artista o grupo</li>
+                  <li class="mt-3 mt-lg-0 informacionCancion">Categoría</li>
+                  <li class="mt-3 mt-lg-0 informacionCancion">Año</li>
+                  <li class="mt-3 mt-lg-0 informacionCancion">Duración</li>
+                  <li class="d-none d-xl-block "><a href="error404.html" class="btn text-light shadow btnAgregarCancion">
+                  + Añadir a lista
+                  </a></li>
+                </div>
+              </ul>             
+            </div>
+          </div> 
+          <div class="text-center d-xl-none mb-5">
+            <a href="error404.html" class="btn btn-primary btnAgregarCancion">
+              Añadir a lista
+              </a>
+          </div>
+          </section>
+        </main>
+        <footer class="text-light pt-xxl-5 mx-0">
+          <section class="container-fluid ms-xxl-5">
+            <div class="row">
+              <div
+                class="col-12 col-xxl-3 ms-4 ms-lg-0 d-flex justify-content-center pe-lg-5 pe-lg-0 ps-0 justify-content-lg-center justify-content-xxl-start px-xxl-0 pe-5"
+              >
+                <img
+                  src="../IMG/logo_350_x_500.png"
+                  alt="logo StreamWave"
+                  class="imgFooter me-lg-0 pe-lg-0"
+                />
+              </div>
+              <div
+                class="col-6 col-md-4 col-lg-4 col-xxl-3 text-center pt-3 pt-xxl-5 ms-lg-0 px-xxl-0"
+              >
+                <h4>Empresa</h4>
+                <ul class="list-unstyled list-inline">
+                  <li>
+                    <a
+                      href="nosotros.html"
+                      class="link-light link-underline-opacity-0 link-underline-opacity-25-hover text-secondary"
+                      >Acerca de Nosotros</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="error404.html"
+                      class="link-light link-underline-opacity-0 link-underline-opacity-25-hover text-secondary"
+                      >Contacto</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="col-6 col-md-4 col-lg-4 col-xxl-3 text-center pt-3 pt-xxl-5 px-xxl-0"
+              >
+                <h4>Cuenta</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      href="#"
+                      class="link-light link-underline-opacity-0 link-underline-opacity-25-hover text-secondary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalIniciarSesion"
+                      >Iniciar sesión</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="error404.html"
+                      class="link-light link-underline-opacity-0 link-underline-opacity-25-hover text-secondary"
+                      >Registrarse</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="col-md-4 col-lg-4 col-xxl-3 text-center pt-3 pt-xl-5 iconosFooter px-xxl-0"
+              >
+                <h4 class="mb-3">Síguenos</h4>
+                <div class="d-flex justify-content-center gap-3">
+                  <a href="error404.html" class="link-light"
+                    ><i class="fa-brands fa-facebook fs-2"></i
+                  ></a>
+                  <a href="error404.html" class="link-light"
+                    ><i class="fa-brands fa-twitter fs-2"></i
+                  ></a>
+                  <a href="error404.html" class="link-light"
+                    ><i class="fa-brands fa-instagram fs-2"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-5">
+              <p class="text-light mb-0 pb-3 pt-xl-5">
+                &copy; Todos los derechos reservados. 2023.
+              </p>
+            </div>
+          </section>
+        </footer>      
+      </div>
+      <div
+    class="modal fade text-light border-2"
+    id="modalIniciarSesion"
+    tabindex="-1"
+    aria-labelledby="modalIniciarSesion"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog ">
+      <div class="modal-content modalIniciarSesion ">
+        <div
+          class="modal-header d-flex justify-content-between contenedorLogo"
+        >
+          <a href="index.html
+          "><img
+          class="imagenLogo"
+          src="./IMG/logo_350_x_500.png"
+          alt="logo"
+          width="225"
+          height="125"
+        /></a>
+        <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h2 class="text-center mb-4 fw-bold">
+            Iniciar sesión en Stream Wave
+          </h2>
+          <a
+            href="error404.html"
+            class="btn btn-danger d-flex align-items-center justify-content-center gap-3 mb-3 mx-sm-3 py-2 rounded-4"
+            ><i class="fa-brands fa-google fs-4 d-none d-md-block"></i
+            ><span class="text-center fw-bold"
+              >Continuar con Google</span
+            ></a
+          >
+          <a
+            href="error404.html"
+            class="btn btn-primary d-flex align-items-center justify-content-center gap-3 mx-sm-3 py-2 rounded-4"
+            ><i class="fa-brands fa-facebook-f fs-4 d-none d-md-block"></i
+            ><span class="text-center fw-bold"
+              >Continuar con Facebook</span
+            ></a
+          >
+        </div>
+        <hr class="mx-4" />
+        <p class="text-center mb-3 fw-bold fs-5">
+          Ingresá tu correo y contraseña
+        </p>
+        <form class="mx-2" id="formularioDeIngreso">
+          <div class="form-floating mb-3 mx-2 mx-sm-4 text-dark">
+            <input
+              type="email"
+              class="form-control rounded-4"
+              id="correo"
+              placeholder="usuario@ejemplo.com"
+              minlength="4"
+              maxlength="265"
+              required
+            />
+            <label for="floatingInput">Correo electrónico</label>
+          </div>
+          <div class="form-floating mx-2 mx-sm-4 text-dark">
+            <input
+              type="password"
+              class="form-control rounded-4"
+              id="clave"
+              minlength="8"
+              placeholder="Contraseña"
+              required
+            />
+            <label for="floatingPassword text-dark">Contraseña</label>
+          </div>
+          <div class="me-4 py-3 text-end">
+            <input type="checkbox" id="recuerdame" />
+            <label class="textoBlanco" for="recuerdame">Recuérdame</label>
+          </div>
+          <div class="mb-4 d-flex">
+            <button
+              type="submit"
+              class="btn btnIniciarSesion mx-2 mx-sm-4 fw-bold text-white rounded-4"
+            >
+              Iniciar sesión
+            </button>
+          </div>
+        </form>
+        <div class="text-center d-flex flex-column gap-4">
+          <a class="recuperarContrasenia" href="error404.html"
+            >¿Olvidaste tu contraseña?</a
+          >
+          <span class="mb-3"
+            >¿No tienes cuenta?
+            <a class="registrate" href="error404.html">Regístrate</a></span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/f8e26b913a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JS/logicaIniciarSesion.js" type="module"></script>
+    <script src="../JS/opcionesUsuarioMenuLateral.js"></script>
+    <script src="../JS/detalleCancion.js" type="module"></script>
+  </body>
+</html>
