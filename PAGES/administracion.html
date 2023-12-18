@@ -55,20 +55,20 @@
                 <li class="nav-item text-center">
                   <a class="nav-link" href="error404.html">Contacto</a>
                 </li>
-                <li class="nav-item text-center">
-                  <a class="nav-link" href="#" data-bs-toggle="modal"
-                  data-bs-target="#modalIniciarSesion">Iniciar sesión</a>
-                </li>
-                <li class="nav-item text-center">
-                  <a class="nav-link" href="error404.html">Registrarse</a>
-                </li>
-                <li class="nav-item dropdown d-none">
+                <div id="opcionesSinUsuarioMD">
+                  <li class="nav-item text-center">
+                    <a class="nav-link" href="#" data-bs-toggle="modal"
+                    data-bs-target="#modalIniciarSesion">Iniciar sesión</a>
+                  </li>
+                  <li class="nav-item text-center">
+                    <a class="nav-link" href="error404.html">Registrarse</a>
+                  </li>
+                </div>              
+                <li class="nav-item dropdown d-none" id="opcionesConUsuarioMD">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Cuenta
                   </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Administrar cuenta</a></li>
-                    <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                  <ul class="dropdown-menu" id="opcionesUsuarioNavHorizontal">
                   </ul>
                 </li>
               </ul>
@@ -92,7 +92,7 @@
               <a class="nav-link linksLG" href="error404.html">Contacto</a>
             </li>
           </ul>
-          <ul class="navbar-nav mb-2 mb-lg-0 d-none">
+          <ul class="navbar-nav mb-2 mb-lg-0" id="opcionesSinUsuarioLG">
             <li class="nav-item">
               <a class="nav-link linksLG" href="#" data-bs-toggle="modal"
                 data-bs-target="#modalIniciarSesion">Iniciar sesión</a>
@@ -101,7 +101,7 @@
               <a class="nav-link linksLG" href="error404.html">Registrarse</a>
             </li>
           </ul>
-          <ul class="navbar-nav mb-2 mb-lg-0 botonDropdown d-none">
+          <ul class="navbar-nav mb-2 mb-lg-0 botonDropdown d-none" id="opcionesConUsuarioLG">
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -111,7 +111,7 @@
                 aria-expanded="false"
               >
                 <i class="fa-regular fa-user fa-xl"></i>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" id="opcionesUsuarioNavHorizontal2">
                 <li>
                   <a class="dropdown-item" href="error404.html">Administrar cuenta</a>
                 </li>
@@ -625,6 +625,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JS/logicaIniciarSesion.js"></script>
+    <script src="../JS/opcionesUsuarioNavbarHorizontal.js"></script>
     <script src="../JS/administracion.js" type="module"></script>
   </body>
 </html>

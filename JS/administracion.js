@@ -1,5 +1,5 @@
 import db from "../JS/db.js";
-import { Cancion } from "./claseCancion.js";
+import { Cancion } from "./CLASES/claseCancion.js";
 import {validarAnio, validarArtista, validarDuracion, validarTitulo, validarUrlCancion, validarUrlImagen} from "./validaciones.js"
 
 const canciones = JSON.parse(localStorage.getItem("cancionesKey")) || [];
@@ -226,4 +226,3 @@ formularioCanciones.addEventListener("submit", crearCancion);
 cargarFilas();
 
 formModalEditar.addEventListener("submit", editarPropiedadesCancion);
-

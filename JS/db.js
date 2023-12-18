@@ -1,7 +1,21 @@
-import {Cancion} from './claseCancion.js'
+import {Cancion} from './CLASES/claseCancion.js';
+import { Usuario} from './CLASES/claseUsuario.js';
 
 const db = {
-  usuarios: [],
+  usuarios: [
+    new Usuario(
+      "Administrador Supremo",
+      "mail@outlook.com",
+      "12345678",
+      "administrador"
+    ),
+    new Usuario(
+      "Un ser mortal",
+      "usuario@mail.com",
+      "87654321",
+      "usuario"
+    )
+  ],
   canciones: [
     new Cancion(
       "7345064a-1b8f-4125-a52c-a87340a63280",

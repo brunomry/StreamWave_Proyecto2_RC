@@ -23,20 +23,20 @@ function verificarRolUsuario() {
       opcionesConUsuarioMD.className = `nav-item dropdown text-center`;
       opcionesUsuarioMenuLateral1.innerHTML = `
         <li>
-          <a class="dropdown-item" href="../PAGES/administracion.html">Administración</a>
+          <a class="dropdown-item" href="administracion.html">Administración</a>
           </li>
           <li>
-          <a class="dropdown-item" href="../PAGES/error404.html">Administrar cuenta</a>
+          <a class="dropdown-item" href="error404.html">Administrar cuenta</a>
           </li>
           <li>
               <a class="dropdown-item" onClick="cerrarSesion()">Cerrar sesión</a>
           </li>`;
       opcionesUsuarioMenuLateral2.innerHTML = `
       <li>
-          <a class="dropdown-item" href="../PAGES/administracion.html">Administrar</a>
+          <a class="dropdown-item" href="administracion.html">Administrar</a>
           </li>
           <li>
-          <a class="dropdown-item" href="../PAGES/error404.html">Administrar cuenta</a>
+          <a class="dropdown-item" href="error404.html">Administrar cuenta</a>
           </li>
           <li>
               <a class="dropdown-item" onClick="cerrarSesion()">Cerrar sesión</a>
@@ -51,14 +51,14 @@ function verificarRolUsuario() {
       opcionesConUsuarioMD.className = `nav-item dropdown text-center`;
       opcionesUsuarioMenuLateral1.innerHTML = `
         <li>
-          <a class="dropdown-item" href="../PAGES/error404.html">Administrar cuenta</a>
+          <a class="dropdown-item" href="error404.html">Administrar cuenta</a>
           </li>
           <li>
               <a class="dropdown-item" onClick="cerrarSesion()">Cerrar sesión</a>
           </li>`;
       opcionesUsuarioMenuLateral2.innerHTML = `
       <li>
-          <a class="dropdown-item" href="../PAGES/error404.html">Administrar cuenta</a>
+          <a class="dropdown-item" href="error404.html">Administrar cuenta</a>
           </li>
           <li>
               <a class="dropdown-item" onClick="cerrarSesion()">Cerrar sesión</a>
